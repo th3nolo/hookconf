@@ -1,0 +1,1105 @@
+{
+ "kit": {
+  "name": "hookconf",
+  "version": "0.1.0",
+  "git_sha": "3517a57"
+ },
+ "harness": {
+  "name": "warp",
+  "version": "v0.2026.09.16.08.27.stable_02",
+  "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe"
+ },
+ "platform": {
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10"
+ },
+ "date": "2026-09-23T05:42:49+00:00",
+ "only": [],
+ "results": [
+  {
+   "id": "O1",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "O2",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "O3",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "O4",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "B1",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "B2",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "B3",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "B4",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "B5",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "B6",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "A1",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "A2",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "A2b",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ],
+   "run": {
+    "kit": "ba26c03",
+    "date": "2026-09-23T18:29:13+00:00"
+   }
+  },
+  {
+   "id": "A3",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "A4",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "A5",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "A6",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "P1",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "P2",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "P3",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "P4",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "P5",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "M1",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "M2",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "M3",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "M4",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "M5",
+   "status": "unsupported",
+   "summary": "Warp has no agent hook system: no hook config, no hook events, no external decision. The only controls are agent-profile allow/deny lists (command_allowlist, command_denylist, directory_allowlist, MCP lists) and the app's confirm step. Static evidence; the live canary (--live) was not run.",
+   "evidence": {
+    "mode": "static (no process started, no account used)",
+    "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+    "survey_source": "docs/harness-hooks-survey.md [WA]: warpdotdev/warp source (HEAD e865a74) and draft PR #15832 (APP-4344); decision point BlocklistAIPermissions::can_autoexecute_command, app/src/ai/blocklist/permissions.rs, called from app/src/ai/blocklist/action_model/execute/shell_command.rs should_autoexecute; outcomes: auto-run or not (user confirms in the app).",
+    "shims": {
+     "oz.cmd": "@echo off\nset \"WARP_CLI_MODE=1\"\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n",
+     "warp.cmd": "@echo off\n\"C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe\" %*\n"
+    },
+    "hook_strings_in_binary": {
+     "PreToolUse": 0,
+     "PostToolUse": 0,
+     "hooks.json": 0,
+     "agent_hooks": 0,
+     "permissionDecision": 0,
+     "hook_event_name": 0
+    },
+    "permission_fields_in_binary": {
+     "command_denylist": 10,
+     "command_allowlist": 7,
+     "directory_allowlist": 6,
+     "mcp_allowlist": 6,
+     "mcp_denylist": 6,
+     "auto_approve_bypasses_command_denylist": 1,
+     "execute_commands": 16,
+     "apply_code_diffs": 9
+    }
+   },
+   "sessions": [
+    "preflight"
+   ]
+  }
+ ],
+ "levels": {
+  "core": "none",
+  "reached": "none",
+  "star": false,
+  "per_level": [
+   {
+    "level": "L0",
+    "name": "Observe",
+    "met": false,
+    "star": false,
+    "passed": [],
+    "blocking_status": {
+     "O1": "unsupported",
+     "O2": "unsupported",
+     "O3": "unsupported",
+     "O4": "unsupported"
+    },
+    "untested": [],
+    "not_applicable": []
+   },
+   {
+    "level": "L1",
+    "name": "Block",
+    "met": false,
+    "star": false,
+    "passed": [],
+    "blocking_status": {
+     "B1": "unsupported",
+     "B2": "unsupported",
+     "B3": "unsupported",
+     "B4": "unsupported"
+    },
+    "untested": [],
+    "not_applicable": []
+   },
+   {
+    "level": "L2",
+    "name": "Ask + context",
+    "met": false,
+    "star": false,
+    "passed": [],
+    "blocking_status": {
+     "A1": "unsupported",
+     "A2": "unsupported",
+     "A2b": "unsupported",
+     "A3": "unsupported",
+     "A4": "unsupported"
+    },
+    "untested": [],
+    "not_applicable": []
+   },
+   {
+    "level": "L3",
+    "name": "Allow",
+    "met": false,
+    "star": false,
+    "passed": [],
+    "blocking_status": {
+     "P1": "unsupported",
+     "P2": "unsupported",
+     "P3": "unsupported"
+    },
+    "untested": [],
+    "not_applicable": []
+   },
+   {
+    "level": "L4",
+    "name": "Content + multi-agent",
+    "met": false,
+    "star": false,
+    "passed": [],
+    "blocking_status": {
+     "M1": "unsupported",
+     "M3": "unsupported"
+    },
+    "untested": [],
+    "not_applicable": []
+   }
+  ],
+  "hardening": {
+   "B5": "unsupported",
+   "B6": "unsupported",
+   "A5": "unsupported",
+   "A6": "unsupported",
+   "P4": "unsupported",
+   "P5": "unsupported",
+   "M2": "unsupported",
+   "M4": "unsupported",
+   "M5": "unsupported"
+  },
+  "gaps": [
+   "B5",
+   "B6",
+   "A5",
+   "A6",
+   "P4",
+   "P5",
+   "M2",
+   "M4",
+   "M5"
+  ],
+  "gap_labels": [
+   "B5 no fail-closed",
+   "B6 silent hook failure",
+   "A5 hook config editable by the agent",
+   "A6 hooks reload mid-session",
+   "P4 no approve/reject event",
+   "P5 managed hook can be disabled",
+   "M2 no provenance tags",
+   "M4 no schema version",
+   "M5 no persistent transport"
+  ],
+  "hardening_not_tested": []
+ },
+ "sessions": {},
+ "session_errors": {},
+ "updates": [
+  {
+   "only": [
+    "A2b"
+   ],
+   "kit": {
+    "name": "hookconf",
+    "version": "0.1.0",
+    "git_sha": "ba26c03"
+   },
+   "date": "2026-09-23T18:29:13+00:00",
+   "platform": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.10"
+   },
+   "binary": "C:\\Users\\<user>\\AppData\\Local\\Programs\\Warp\\warp.exe",
+   "sessions": {},
+   "session_errors": {}
+  }
+ ]
+}

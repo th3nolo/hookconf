@@ -1,0 +1,8 @@
+{
+  "name": "hookconf-ci-opencode",
+  "private": true,
+  "description": "Pinned harness for hookconf CI; installed with npm ci --ignore-scripts",
+  "dependencies": {
+    "opencode-ai": "1.18.31"
+  }
+}

@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+# run roots (default base is outside the repo; these cover HOOKCONF_RUN_BASE pointed here)
+hookconf-runs/
+runs/
+hookconf-*/
+# locally installed harnesses under test
+tools/
+node_modules/
+
+# local agent worktrees
+.claude/worktrees/

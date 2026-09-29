@@ -1,0 +1,8 @@
+{
+  "name": "hookconf-ci-pi",
+  "private": true,
+  "description": "Pinned harness for hookconf CI; installed with npm ci --ignore-scripts",
+  "dependencies": {
+    "@earendil-works/pi-coding-agent": "0.86.1"
+  }
+}

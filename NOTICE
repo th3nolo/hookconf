@@ -1,0 +1,7 @@
+hookconf
+Copyright 2026 Manuel Parra (https://th3nolo.com)
+
+This product includes software developed by Manuel Parra.
+
+hookconf includes no third-party code. It starts third-party agent CLIs that
+the user installs; see THIRD_PARTY_NOTICES.md.

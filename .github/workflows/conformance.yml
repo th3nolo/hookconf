@@ -1,0 +1,213 @@
+# hookconf conformance: unit tests, then every harness against the mock model
+# on Linux and Windows. No API keys or secrets: the kit replaces every key with
+# a dummy and points each harness at its local mock model.
+#
+# Pinned versions (72-hour rule: nothing published less than 72 h before it
+# was pinned; checked 2026-09-23T18:10Z, cutoff 2026-09-20T18:08Z):
+#   actions/checkout          v7.0.1  3d3c42e5aac5ba805825da76410c181273ba90b1  release 2026-07-20
+#   actions/setup-python      v7.0.0  5fda3b95a4ea91299a34e894583c3862153e4b97  release 2026-07-20
+#   actions/setup-node        v7.0.0  820762786026740c76f36085b0efc47a31fe5020  release 2026-07-14
+#   actions/upload-artifact   v7.0.1  043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  release 2026-04-10
+#   actions/download-artifact v8.0.1  3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  release 2026-03-11
+#   Python 3.12.10  actions/python-versions build 2025-04-08 (last 3.12 with a Windows build)
+#   Node 24.21.0    nodejs.org 2026-09-07 (Pi needs >= 22.19)
+#   Harnesses (exact versions, full lockfiles in ci/npm/*/package-lock.json):
+#     @anthropic-ai/claude-code       2.1.278  npm 2026-09-19T01:48Z
+#     @openai/codex                   0.155.1  npm 2026-09-18T20:09Z
+#     opencode-ai                     1.18.31  npm 2026-09-14T17:47Z
+#     @earendil-works/pi-coding-agent 0.86.1   npm 2026-09-20T11:16Z
+#   All 172 packages in the four lockfiles: `python ci/lock_dates.py` (youngest 79 h at pin time).
+#   pytest 9.1.1 and its dependencies: ci/requirements-ci.txt (hashes, dates in the file).
+#
+# Exit rule: a harness failing a requirement is data (pass/fail/unsupported
+# go into the JSON). The job fails only on a kit error: a unit test fails,
+# the kit crashes, or a result is `error` / a session failed
+# (`hookconf run --fail-on-error` exits 3). Results are uploaded either way.
+
+name: conformance
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "23 4 * * 1"   # Mondays 04:23 UTC
+  workflow_dispatch:
+    inputs:
+      harnesses:
+        description: "Harnesses, space-separated (claude-code codex opencode-v1 opencode-v2 pi)"
+        type: string
+        default: "claude-code codex opencode-v1 opencode-v2 pi"
+      only:
+        description: "Requirement ids, comma-separated (e.g. B1,A2b); empty = all"
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: conformance-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHON_VERSION: "3.12.10"
+  NODE_VERSION: "24.21.0"
+  PYTHONUTF8: "1"
+
+jobs:
+  unit:
+    name: unit tests (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - name: Install pytest (pinned, hashes)
+        run: python -m pip install --no-deps --require-hashes -r ci/requirements-ci.txt
+      - name: Unit tests
+        shell: bash
+        run: python -m pytest -q tests
+
+  plan:
+    name: choose harnesses
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      harnesses: ${{ steps.pick.outputs.harnesses }}
+      only: ${{ steps.pick.outputs.only }}
+    steps:
+      - id: pick
+        name: Validate the harness list and ids
+        env:
+          # inputs go through env vars, never into the script text
+          IN_HARNESSES: ${{ inputs.harnesses }}
+          IN_ONLY: ${{ inputs.only }}
+        shell: python
+        run: |
+          import json, os, re, sys
+          known = ["claude-code", "codex", "opencode-v1", "opencode-v2", "pi"]
+          wanted = (os.environ.get("IN_HARNESSES") or " ".join(known)).split()
+          bad = [h for h in wanted if h not in known]
+          if bad or not wanted:
+              sys.exit(f"unknown harness(es) {bad}; known: {known}")
+          only = (os.environ.get("IN_ONLY") or "").strip()
+          if only and not re.fullmatch(r"[A-Za-z0-9]+(,[A-Za-z0-9]+)*", only):
+              sys.exit(f"bad --only value {only!r}")
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+              fh.write(f"harnesses={json.dumps(sorted(set(wanted)))}\n")
+              fh.write(f"only={only}\n")
+
+  conformance:
+    name: ${{ matrix.harness }} (${{ matrix.os }})
+    needs: [unit, plan]
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        harness: ${{ fromJSON(needs.plan.outputs.harnesses) }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
+    env:
+      HARNESS: ${{ matrix.harness }}
+      ONLY: ${{ needs.plan.outputs.only }}
+      # outside the runner's home: the kit refuses a run root inside it.
+      # (the `runner` context is not available in job-level env, so use matrix.os)
+      HOOKCONF_RUN_BASE: ${{ matrix.os == 'windows-latest' && 'C:/hookconf-runs' || '/tmp/hookconf-runs' }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          package-manager-cache: false
+      - name: Install the harness (npm ci from the pinned lockfile, no install scripts)
+        shell: bash
+        run: |
+          case "$HARNESS" in
+            opencode-v1|opencode-v2) dir=opencode ;;
+            *) dir="$HARNESS" ;;
+          esac
+          npm ci --prefix "ci/npm/$dir" --ignore-scripts --no-audit --no-fund
+          echo "NPM_DIR=ci/npm/$dir" >> "$GITHUB_ENV"
+      - name: Point the kit at the native binary
+        shell: bash
+        run: |
+          bin=$(python -m hookconf bin --harness "$HARNESS" --prefix "$NPM_DIR")
+          case "$HARNESS" in
+            claude-code) var=HOOKCONF_CLAUDE_BIN ;;
+            codex) var=HOOKCONF_CODEX_BIN ;;
+            opencode-v1|opencode-v2) var=HOOKCONF_OPENCODE_BIN ;;
+            pi) var=HOOKCONF_PI_CLI ;;
+          esac
+          echo "$var=$bin" >> "$GITHUB_ENV"
+          echo "$var=$bin"
+      - name: Run the conformance checks (mock model only)
+        shell: bash
+        run: |
+          mkdir -p ci-results
+          args=(run --harness "$HARNESS" --out "ci-results/$HARNESS-${{ runner.os }}-a${{ github.run_attempt }}.json" --fail-on-error)
+          if [ -n "$ONLY" ]; then args+=(--only "$ONLY"); fi
+          python -m hookconf "${args[@]}"
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: results-${{ matrix.harness }}-${{ runner.os }}-a${{ github.run_attempt }}
+          path: ci-results/*.json
+          if-no-files-found: warn
+      - name: Upload run roots (on failure, for debugging)
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: runroots-${{ matrix.harness }}-${{ runner.os }}-a${{ github.run_attempt }}
+          path: |
+            ${{ env.HOOKCONF_RUN_BASE }}/**/harness.stdout
+            ${{ env.HOOKCONF_RUN_BASE }}/**/harness.stderr
+            ${{ env.HOOKCONF_RUN_BASE }}/**/probe.jsonl
+            ${{ env.HOOKCONF_RUN_BASE }}/**/mock.jsonl
+          retention-days: 7
+          if-no-files-found: ignore
+
+  matrix:
+    name: matrix.md
+    needs: [plan, conformance]
+    if: always() && needs.plan.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          pattern: results-*
+          path: ci-results
+          merge-multiple: true
+      - name: Render matrix.md from all result files
+        shell: bash
+        run: |
+          ls ci-results/*.json
+          python -m hookconf report ci-results/*.json --md ci-results/matrix.md
+          cat ci-results/matrix.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload matrix and results
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: conformance-matrix-a${{ github.run_attempt }}
+          path: |
+            ci-results/matrix.md
+            ci-results/*.json

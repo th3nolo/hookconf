@@ -1,0 +1,1271 @@
+{
+ "kit": {
+  "name": "hookconf",
+  "version": "0.1.0",
+  "git_sha": "3517a57"
+ },
+ "harness": {
+  "name": "opencode-v2",
+  "version": "1.18.31",
+  "binary": "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe"
+ },
+ "platform": {
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10"
+ },
+ "date": "2026-09-23T05:42:46+00:00",
+ "only": [],
+ "results": [
+  {
+   "id": "O1",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "O2",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "O3",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "O4",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "B1",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "B2",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "B3",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "B4",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "B5",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "B6",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "A1",
+   "status": "not_tested",
+   "summary": "needs an interactive TTY prompt (PTY driver not in MVP)",
+   "evidence": {},
+   "sessions": []
+  },
+  {
+   "id": "A2",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "A2b",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-m7vdshz0/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T18:28:51.598Z level=WARN run=5b950681 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-m7vdshz0\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T18:28:51.855Z level=ERROR run=5b950681 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-m7vdshz0/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-m7vdshz0/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ],
+   "run": {
+    "kit": "ba26c03",
+    "date": "2026-09-23T18:29:07+00:00"
+   }
+  },
+  {
+   "id": "A3",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "A4",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "A5",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "A6",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "P1",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "P2",
+   "status": "not_tested",
+   "summary": "needs managed/policy settings outside the run root (system paths); not written by design",
+   "evidence": {},
+   "sessions": []
+  },
+  {
+   "id": "P3",
+   "status": "not_tested",
+   "summary": "remembered grants need an interactive approval",
+   "evidence": {},
+   "sessions": []
+  },
+  {
+   "id": "P4",
+   "status": "not_tested",
+   "summary": "user approve/reject needs an interactive prompt",
+   "evidence": {},
+   "sessions": []
+  },
+  {
+   "id": "P5",
+   "status": "not_tested",
+   "summary": "managed hooks need system policy paths outside the run root",
+   "evidence": {},
+   "sessions": []
+  },
+  {
+   "id": "M1",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "M2",
+   "status": "not_tested",
+   "summary": "no harness has provenance tags; test needs web/MCP canaries (not in MVP)",
+   "evidence": {},
+   "sessions": []
+  },
+  {
+   "id": "M3",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "M4",
+   "status": "unsupported",
+   "summary": "OpenCode 1.18.31 called the v2 entry point (ctx keys: options, agent, aisdk, catalog, command, integration, plugin, reference, skill; no `tool`, so ctx.tool.hook cannot be registered) but no tool hook fired; it then rejected the plugin, reported only in its log file (\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server); the shell tool ran with no hook event",
+   "evidence": {
+    "plugin_loaded_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "probe_events": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "ctx_keys",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ],
+    "opencode_log_plugin_lines": [
+     "timestamp=2026-09-23T05:42:41.717Z level=WARN run=4ec35131 message=\"background dependency install failed\" dir=\"C:\\\\hookconf-runs\\\\hookconf-opencode-v2-preflight-8pgth11v\\\\xdg\\\\config\\\\opencode\" error=\"Cause([Fail(NpmInstallFailedError (cause: rF: 403 hookconf: egress blocked - GET https://registry.npmjs.org/@opencode-ai%2fplugin))])\"",
+     "timestamp=2026-09-23T05:42:41.743Z level=ERROR run=4ec35131 message=\"failed to load plugin\" path=file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js error=\"Plugin file:///C:/hookconf-runs/hookconf-opencode-v2-preflight-8pgth11v/xdg/config/opencode/plugins/hookconf_probe.js must default export an object with server()\""
+    ],
+    "stdout_stderr_mentions_plugin": [],
+    "tool_ran": true
+   },
+   "sessions": [
+    "preflight"
+   ]
+  },
+  {
+   "id": "M5",
+   "status": "not_tested",
+   "summary": "persistent transport handler not in MVP (command hooks only)",
+   "evidence": {},
+   "sessions": []
+  }
+ ],
+ "levels": {
+  "core": "none",
+  "reached": "none",
+  "star": false,
+  "per_level": [
+   {
+    "level": "L0",
+    "name": "Observe",
+    "met": false,
+    "star": false,
+    "passed": [],
+    "blocking_status": {
+     "O1": "unsupported",
+     "O2": "unsupported",
+     "O3": "unsupported",
+     "O4": "unsupported"
+    },
+    "untested": [],
+    "not_applicable": []
+   },
+   {
+    "level": "L1",
+    "name": "Block",
+    "met": false,
+    "star": false,
+    "passed": [],
+    "blocking_status": {
+     "B1": "unsupported",
+     "B2": "unsupported",
+     "B3": "unsupported",
+     "B4": "unsupported"
+    },
+    "untested": [],
+    "not_applicable": []
+   },
+   {
+    "level": "L2",
+    "name": "Ask + context",
+    "met": false,
+    "star": false,
+    "passed": [],
+    "blocking_status": {
+     "A2": "unsupported",
+     "A2b": "unsupported",
+     "A3": "unsupported",
+     "A4": "unsupported"
+    },
+    "untested": [
+     "A1"
+    ],
+    "not_applicable": []
+   },
+   {
+    "level": "L3",
+    "name": "Allow",
+    "met": false,
+    "star": false,
+    "passed": [],
+    "blocking_status": {
+     "P1": "unsupported"
+    },
+    "untested": [
+     "P2",
+     "P3"
+    ],
+    "not_applicable": []
+   },
+   {
+    "level": "L4",
+    "name": "Content + multi-agent",
+    "met": false,
+    "star": false,
+    "passed": [],
+    "blocking_status": {
+     "M1": "unsupported",
+     "M3": "unsupported"
+    },
+    "untested": [],
+    "not_applicable": []
+   }
+  ],
+  "hardening": {
+   "B5": "unsupported",
+   "B6": "unsupported",
+   "A5": "unsupported",
+   "A6": "unsupported",
+   "P4": "not_tested",
+   "P5": "not_tested",
+   "M2": "not_tested",
+   "M4": "unsupported",
+   "M5": "not_tested"
+  },
+  "gaps": [
+   "B5",
+   "B6",
+   "A5",
+   "A6",
+   "M4"
+  ],
+  "gap_labels": [
+   "B5 no fail-closed",
+   "B6 silent hook failure",
+   "A5 hook config editable by the agent",
+   "A6 hooks reload mid-session",
+   "M4 no schema version"
+  ],
+  "hardening_not_tested": [
+   "P4",
+   "P5",
+   "M2",
+   "M5"
+  ]
+ },
+ "sessions": {
+  "preflight": {
+   "sid": "preflight",
+   "root": "C:\\hookconf-runs\\hookconf-opencode-v2-preflight-8pgth11v",
+   "argv": [
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "hookconf/mock",
+    "HKSCRIPT:main",
+    "run",
+    "the",
+    "scripted",
+    "steps"
+   ],
+   "mode": "default",
+   "exit": 0,
+   "duration_s": 4.74,
+   "timed_out": false,
+   "model_requests": 2,
+   "probe_events": 1,
+   "egress_refused": [
+    "CONNECT registry.npmjs.org:443"
+   ],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "stdout_tail": "part\":{\"id\":\"prt_0ccc9af5c001BbbFjhBVlCfR7X\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0ccc9a5aa001tElBohIvxoTcTr\",\"sessionID\":\"ses_f33365c23fferMjfNhzh1sMnXy\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n{\"type\":\"step_start\",\"timestamp\":1790142165080,\"sessionID\":\"ses_f33365c23fferMjfNhzh1sMnXy\",\"part\":{\"id\":\"prt_0ccc9b010001k7et4o3f27Pnrs\",\"messageID\":\"msg_0ccc9af7d001HEQjtEIdqfA3tL\",\"sessionID\":\"ses_f33365c23fferMjfNhzh1sMnXy\",\"type\":\"step-start\"}}\r\n{\"type\":\"text\",\"timestamp\":1790142165080,\"sessionID\":\"ses_f33365c23fferMjfNhzh1sMnXy\",\"part\":{\"id\":\"prt_0ccc9b016001wTSaNKIXvMRecw\",\"messageID\":\"msg_0ccc9af7d001HEQjtEIdqfA3tL\",\"sessionID\":\"ses_f33365c23fferMjfNhzh1sMnXy\",\"type\":\"text\",\"text\":\"HK-DONE\",\"time\":{\"start\":1790142165014,\"end\":1790142165022}}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790142165080,\"sessionID\":\"ses_f33365c23fferMjfNhzh1sMnXy\",\"part\":{\"id\":\"prt_0ccc9b02c001Ckh2wxml5fqBFk\",\"reason\":\"stop\",\"messageID\":\"msg_0ccc9af7d001HEQjtEIdqfA3tL\",\"sessionID\":\"ses_f33365c23fferMjfNhzh1sMnXy\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+   "stderr_tail": ""
+  }
+ },
+ "session_errors": {},
+ "updates": [
+  {
+   "only": [
+    "A2b"
+   ],
+   "kit": {
+    "name": "hookconf",
+    "version": "0.1.0",
+    "git_sha": "ba26c03"
+   },
+   "date": "2026-09-23T18:29:07+00:00",
+   "platform": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.10"
+   },
+   "binary": "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+   "sessions": {
+    "preflight": {
+     "sid": "preflight",
+     "root": "C:\\hookconf-runs\\hookconf-opencode-v2-preflight-m7vdshz0",
+     "argv": [
+      "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+      "run",
+      "--format",
+      "json",
+      "--model",
+      "hookconf/mock",
+      "HKSCRIPT:main",
+      "run",
+      "the",
+      "scripted",
+      "steps"
+     ],
+     "mode": "default",
+     "exit": 0,
+     "duration_s": 16.07,
+     "timed_out": false,
+     "model_requests": 2,
+     "probe_events": 1,
+     "egress_refused": [
+      "CONNECT registry.npmjs.org:443",
+      "CONNECT github.com:443"
+     ],
+     "isolation_diff": {},
+     "unknown_requests": [],
+     "stdout_tail": "part\":{\"id\":\"prt_0cf87399c001BN73cGctXdh4iA\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0cf871d9f001tjF7CfVPBZGJHb\",\"sessionID\":\"ses_f3078e7d4ffeIddxC7XdQnDOtV\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n{\"type\":\"step_start\",\"timestamp\":1790188141560,\"sessionID\":\"ses_f3078e7d4ffeIddxC7XdQnDOtV\",\"part\":{\"id\":\"prt_0cf873bba001uu7sVwo5usy4TO\",\"messageID\":\"msg_0cf8739a8001gKPS93BYRwkTdX\",\"sessionID\":\"ses_f3078e7d4ffeIddxC7XdQnDOtV\",\"type\":\"step-start\"}}\r\n{\"type\":\"text\",\"timestamp\":1790188141560,\"sessionID\":\"ses_f3078e7d4ffeIddxC7XdQnDOtV\",\"part\":{\"id\":\"prt_0cf873bc9001JqJ5tnUZrJxVtt\",\"messageID\":\"msg_0cf8739a8001gKPS93BYRwkTdX\",\"sessionID\":\"ses_f3078e7d4ffeIddxC7XdQnDOtV\",\"type\":\"text\",\"text\":\"HK-DONE\",\"time\":{\"start\":1790188141513,\"end\":1790188141517}}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790188141560,\"sessionID\":\"ses_f3078e7d4ffeIddxC7XdQnDOtV\",\"part\":{\"id\":\"prt_0cf873bd2001VR6LwFfhjTuB0Q\",\"reason\":\"stop\",\"messageID\":\"msg_0cf8739a8001gKPS93BYRwkTdX\",\"sessionID\":\"ses_f3078e7d4ffeIddxC7XdQnDOtV\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+     "stderr_tail": ""
+    }
+   },
+   "session_errors": {}
+  }
+ ]
+}

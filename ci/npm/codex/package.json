@@ -1,0 +1,8 @@
+{
+  "name": "hookconf-ci-codex",
+  "private": true,
+  "description": "Pinned harness for hookconf CI; installed with npm ci --ignore-scripts",
+  "dependencies": {
+    "@openai/codex": "0.155.1"
+  }
+}

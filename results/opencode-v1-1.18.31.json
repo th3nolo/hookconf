@@ -1,0 +1,2907 @@
+{
+ "kit": {
+  "name": "hookconf",
+  "version": "0.1.0",
+  "git_sha": "ef229df"
+ },
+ "harness": {
+  "name": "opencode-v1",
+  "version": "1.18.31",
+  "binary": "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe"
+ },
+ "platform": {
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10"
+ },
+ "date": "2026-09-23T06:27:20+00:00",
+ "only": [],
+ "results": [
+  {
+   "id": "O1",
+   "status": "pass",
+   "summary": "every tool kind produced one PreToolUse and one PostToolUse with the same tool_use_id",
+   "evidence": {
+    "per_kind": {
+     "shell": {
+      "hook_tool_name": "bash",
+      "pre_ids": [
+       "toolu_hk3_29c25c_0"
+      ],
+      "post_ids": [
+       "toolu_hk3_29c25c_0"
+      ],
+      "one_pre_one_post_same_id": true
+     },
+     "write": {
+      "hook_tool_name": "write",
+      "pre_ids": [
+       "toolu_hk4_5a7d99_0"
+      ],
+      "post_ids": [
+       "toolu_hk4_5a7d99_0"
+      ],
+      "one_pre_one_post_same_id": true
+     },
+     "edit": {
+      "hook_tool_name": "edit",
+      "pre_ids": [
+       "toolu_hk6_4088d9_0"
+      ],
+      "post_ids": [
+       "toolu_hk6_4088d9_0"
+      ],
+      "one_pre_one_post_same_id": true
+     },
+     "read": {
+      "hook_tool_name": "read",
+      "pre_ids": [
+       "toolu_hk7_a010e5_0"
+      ],
+      "post_ids": [
+       "toolu_hk7_a010e5_0"
+      ],
+      "one_pre_one_post_same_id": true
+     }
+    },
+    "model_call_ids": [
+     "toolu_hk3_29c25c_0",
+     "toolu_hk4_5a7d99_0",
+     "toolu_hk5_9055cc_0",
+     "toolu_hk6_4088d9_0",
+     "toolu_hk7_a010e5_0",
+     "toolu_hk8_7cdb25_0"
+    ],
+    "probe": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "cwd",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     },
+     {
+      "event": "UserPromptSubmit",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "prompt",
+       "prompt_message_id",
+       "session_id"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     },
+     {
+      "event": "PreToolUse",
+      "action": "none",
+      "exit": 0,
+      "tool_name": "bash",
+      "tool_use_id": "toolu_hk3_29c25c_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "command": "echo HK-O1-SHELL",
+       "description": "hookconf canary"
+      },
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-observe-2cotzqoo\\tmp\\hookconf-transcript-toolu_hk3_29c25c_0.json",
+        "exists": true,
+        "size": 1316,
+        "needles": {
+         "HK-A4-SECRET-OUTPUT": false,
+         "HK-O3": true
+        }
+       }
+      }
+     },
+     {
+      "event": "PostToolUse",
+      "action": "none",
+      "exit": 0,
+      "tool_name": "bash",
+      "tool_use_id": "toolu_hk3_29c25c_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_response",
+       "tool_use_id"
+      ],
+      "tool_input": {
+       "command": "echo HK-O1-SHELL",
+       "description": "hookconf canary"
+      },
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     },
+     {
+      "event": "PreToolUse",
+      "action": "none",
+      "exit": 0,
+      "tool_name": "write",
+      "tool_use_id": "toolu_hk4_5a7d99_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "filePath": "C:/hookconf-runs/hookconf-opencode-v1-observe-2cotzqoo/project/hk_o1_write.txt",
+       "content": "HK-A3-CONTENT line"
+      },
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-observe-2cotzqoo\\tmp\\hookconf-transcript-toolu_hk4_5a7d99_0.json",
+        "exists": true,
+        "size": 2708,
+        "needles": {
+         "HK-A4-SECRET-OUTPUT": false,
+         "HK-O3": true
+        }
+       }
+      }
+     },
+     {
+      "event": "PostToolUse",
+      "action": "none",
+      "exit": 0,
+      "tool_name": "write",
+      "tool_use_id": "toolu_hk4_5a7d99_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_response",
+       "tool_use_id"
+      ],
+      "tool_input": {
+       "filePath": "C:/hookconf-runs/hookconf-opencode-v1-observe-2cotzqoo/project/hk_o1_write.txt",
+       "content": "HK-A3-CONTENT line"
+      },
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     },
+     {
+      "event": "PreToolUse",
+      "action": "none",
+      "exit": 0,
+      "tool_name": "read",
+      "tool_use_id": "toolu_hk5_9055cc_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "filePath": "C:/hookconf-runs/hookconf-opencode-v1-observe-2cotzqoo/project/hk_o1_write.txt"
+      },
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-observe-2cotzqoo\\tmp\\hookconf-transcript-toolu_hk5_9055cc_0.json",
+        "exists": true,
+        "size": 4320,
+        "needles": {
+         "HK-A4-SECRET-OUTPUT": false,
+         "HK-O3": true
+        }
+       }
+      }
+     },
+     {
+      "event": "PostToolUse",
+      "action": "none",
+      "exit": 0,
+      "tool_name": "read",
+      "tool_use_id": "toolu_hk5_9055cc_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_response",
+       "tool_use_id"
+      ],
+      "tool_input": {
+       "filePath": "C:/hookconf-runs/hookconf-opencode-v1-observe-2cotzqoo/project/hk_o1_write.txt"
+      },
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     },
+     {
+      "event": "PreToolUse",
+      "action": "none",
+      "exit": 0,
+      "tool_name": "edit",
+      "tool_use_id": "toolu_hk6_4088d9_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "filePath": "C:/hookconf-runs/hookconf-opencode-v1-observe-2cotzqoo/project/hk_o1_write.txt",
+       "oldString": "HK-A3-CONTENT line",
+       "newString": "HK-A3-EDITED line"
+      },
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-observe-2cotzqoo\\tmp\\hookconf-transcript-toolu_hk6_4088d9_0.json",
+        "exists": true,
+        "size": 6194,
+        "needles": {
+         "HK-A4-SECRET-OUTPUT": false,
+         "HK-O3": true
+        }
+       }
+      }
+     },
+     {
+      "event": "PostToolUse",
+      "action": "none",
+      "exit": 0,
+      "tool_name": "edit",
+      "tool_use_id": "toolu_hk6_4088d9_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_response",
+       "tool_use_id"
+      ],
+      "tool_input": {
+       "filePath": "C:/hookconf-runs/hookconf-opencode-v1-observe-2cotzqoo/project/hk_o1_write.txt",
+       "oldString": "HK-A3-CONTENT line",
+       "newString": "HK-A3-EDITED line"
+      },
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     },
+     {
+      "event": "PreToolUse",
+      "action": "none",
+      "exit": 0,
+      "tool_name": "read",
+      "tool_use_id": "toolu_hk7_a010e5_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "filePath": "C:/hookconf-runs/hookconf-opencode-v1-observe-2cotzqoo/project/hk_read_src.txt"
+      },
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-observe-2cotzqoo\\tmp\\hookconf-transcript-toolu_hk7_a010e5_0.json",
+        "exists": true,
+        "size": 8769,
+        "needles": {
+         "HK-A4-SECRET-OUTPUT": false,
+         "HK-O3": true
+        }
+       }
+      }
+     },
+     {
+      "event": "PostToolUse",
+      "action": "none",
+      "exit": 0,
+      "tool_name": "read",
+      "tool_use_id": "toolu_hk7_a010e5_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_response",
+       "tool_use_id"
+      ],
+      "tool_input": {
+       "filePath": "C:/hookconf-runs/hookconf-opencode-v1-observe-2cotzqoo/project/hk_read_src.txt"
+      },
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     },
+     {
+      "event": "PreToolUse",
+      "action": "none",
+      "exit": 0,
+      "tool_name": "bash",
+      "tool_use_id": "toolu_hk8_7cdb25_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "command": "echo HK-A4-NEXT",
+       "description": "hookconf canary"
+      },
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-observe-2cotzqoo\\tmp\\hookconf-transcript-toolu_hk8_7cdb25_0.json",
+        "exists": true,
+        "size": 10646,
+        "needles": {
+         "HK-A4-SECRET-OUTPUT": true,
+         "HK-O3": true
+        }
+       }
+      }
+     },
+     {
+      "event": "PostToolUse",
+      "action": "none",
+      "exit": 0,
+      "tool_name": "bash",
+      "tool_use_id": "toolu_hk8_7cdb25_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_response",
+       "tool_use_id"
+      ],
+      "tool_input": {
+       "command": "echo HK-A4-NEXT",
+       "description": "hookconf canary"
+      },
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     }
+    ]
+   },
+   "sessions": [
+    "observe"
+   ]
+  },
+  {
+   "id": "O2",
+   "status": "fail",
+   "summary": "13 events; 12 events lack fields",
+   "evidence": {
+    "turn_id_fields_seen": [
+     "prompt_message_id"
+    ],
+    "events_missing_fields": [
+     {
+      "event": "PreToolUse",
+      "tool_name": "bash",
+      "missing": [
+       "turn id (turn_id|prompt_id|promptId|prompt_message_id)"
+      ]
+     },
+     {
+      "event": "PostToolUse",
+      "tool_name": "bash",
+      "missing": [
+       "turn id (turn_id|prompt_id|promptId|prompt_message_id)"
+      ]
+     },
+     {
+      "event": "PreToolUse",
+      "tool_name": "write",
+      "missing": [
+       "turn id (turn_id|prompt_id|promptId|prompt_message_id)"
+      ]
+     },
+     {
+      "event": "PostToolUse",
+      "tool_name": "write",
+      "missing": [
+       "turn id (turn_id|prompt_id|promptId|prompt_message_id)"
+      ]
+     },
+     {
+      "event": "PreToolUse",
+      "tool_name": "read",
+      "missing": [
+       "turn id (turn_id|prompt_id|promptId|prompt_message_id)"
+      ]
+     },
+     {
+      "event": "PostToolUse",
+      "tool_name": "read",
+      "missing": [
+       "turn id (turn_id|prompt_id|promptId|prompt_message_id)"
+      ]
+     },
+     {
+      "event": "PreToolUse",
+      "tool_name": "edit",
+      "missing": [
+       "turn id (turn_id|prompt_id|promptId|prompt_message_id)"
+      ]
+     },
+     {
+      "event": "PostToolUse",
+      "tool_name": "edit",
+      "missing": [
+       "turn id (turn_id|prompt_id|promptId|prompt_message_id)"
+      ]
+     },
+     {
+      "event": "PreToolUse",
+      "tool_name": "read",
+      "missing": [
+       "turn id (turn_id|prompt_id|promptId|prompt_message_id)"
+      ]
+     },
+     {
+      "event": "PostToolUse",
+      "tool_name": "read",
+      "missing": [
+       "turn id (turn_id|prompt_id|promptId|prompt_message_id)"
+      ]
+     },
+     {
+      "event": "PreToolUse",
+      "tool_name": "bash",
+      "missing": [
+       "turn id (turn_id|prompt_id|promptId|prompt_message_id)"
+      ]
+     },
+     {
+      "event": "PostToolUse",
+      "tool_name": "bash",
+      "missing": [
+       "turn id (turn_id|prompt_id|promptId|prompt_message_id)"
+      ]
+     }
+    ],
+    "keys_per_event": {
+     "UserPromptSubmit": [
+      "cwd",
+      "hook_event_name",
+      "native_event",
+      "native_input",
+      "prompt",
+      "prompt_message_id",
+      "session_id"
+     ],
+     "PreToolUse": [
+      "cwd",
+      "hook_event_name",
+      "native_event",
+      "native_input",
+      "session_id",
+      "tool_input",
+      "tool_name",
+      "tool_use_id",
+      "transcript_path"
+     ],
+     "PostToolUse": [
+      "cwd",
+      "hook_event_name",
+      "native_event",
+      "native_input",
+      "session_id",
+      "tool_input",
+      "tool_name",
+      "tool_response",
+      "tool_use_id"
+     ]
+    }
+   },
+   "sessions": [
+    "observe"
+   ]
+  },
+  {
+   "id": "O3",
+   "status": "pass",
+   "summary": "UserPromptSubmit carries the typed prompt byte-for-byte",
+   "evidence": {
+    "sent": "HKSCRIPT:main HK-O3 prompt: ünïcødé \"double\" 'single' $HOME `tick` & | <tag> 100%",
+    "received": [
+     "HKSCRIPT:main HK-O3 prompt: ünïcødé \"double\" 'single' $HOME `tick` & | <tag> 100%"
+    ]
+   },
+   "sessions": [
+    "observe"
+   ]
+  },
+  {
+   "id": "O4",
+   "status": "pass",
+   "summary": "subagent tool call reached the probe",
+   "evidence": {
+    "subagent_pre_events": [
+     {
+      "event": "PreToolUse",
+      "action": "deny",
+      "exit": 0,
+      "tool_name": "bash",
+      "tool_use_id": "toolu_hk4_cf287e_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "command": "echo HK-M3 > C:/hookconf-runs/hookconf-opencode-v1-m3_subagent-pext1872/project/marker_m3.txt",
+       "description": "hookconf canary"
+      },
+      "probe_stdout": "{\"action\": \"deny\", \"reason\": \"HK-SUB-DENY\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-m3_subagent-pext1872\\tmp\\hookconf-transcript-toolu_hk4_cf287e_0.json",
+        "exists": true,
+        "size": 1278,
+        "needles": {}
+       }
+      }
+     }
+    ],
+    "all_events": [
+     "PluginLoaded",
+     "UserPromptSubmit",
+     "PreToolUse",
+     "UserPromptSubmit",
+     "PreToolUse",
+     "PostToolUse"
+    ]
+   },
+   "sessions": [
+    "m3_subagent"
+   ]
+  },
+  {
+   "id": "B1",
+   "status": "pass",
+   "summary": "deny: shell marker absent, write marker absent (control: all present; mode default)",
+   "evidence": {
+    "control": {
+     "shell": {
+      "marker": "C:/hookconf-runs/hookconf-opencode-v1-control_default-jfia0jvq/project/marker_control_default_shell.txt",
+      "marker_exists": true
+     },
+     "write": {
+      "marker": "C:/hookconf-runs/hookconf-opencode-v1-control_default-jfia0jvq/project/marker_control_default_write.txt",
+      "marker_exists": true
+     },
+     "pre_events": 2,
+     "reason_in_model_request": {
+      "toolu_hk3_ab7510_0": {
+       "tool_name": "bash",
+       "found": false,
+       "tool_result": {
+        "id": "toolu_hk3_ab7510_0",
+        "text": "(no output)",
+        "is_error": false
+       }
+      },
+      "toolu_hk4_0caa89_0": {
+       "tool_name": "write",
+       "found": false,
+       "tool_result": {
+        "id": "toolu_hk4_0caa89_0",
+        "text": "Wrote file successfully.",
+        "is_error": false
+       }
+      }
+     }
+    },
+    "test": {
+     "shell": {
+      "marker": "C:/hookconf-runs/hookconf-opencode-v1-deny_default-7l_r79ok/project/marker_deny_default_shell.txt",
+      "marker_exists": false
+     },
+     "write": {
+      "marker": "C:/hookconf-runs/hookconf-opencode-v1-deny_default-7l_r79ok/project/marker_deny_default_write.txt",
+      "marker_exists": false
+     },
+     "pre_events": 2,
+     "reason_in_model_request": {
+      "toolu_hk3_ddc460_0": {
+       "tool_name": "bash",
+       "found": true,
+       "tool_result": {
+        "id": "toolu_hk3_ddc460_0",
+        "text": "HK-DENY-REASON",
+        "is_error": true
+       }
+      },
+      "toolu_hk4_62530f_0": {
+       "tool_name": "write",
+       "found": true,
+       "tool_result": {
+        "id": "toolu_hk4_62530f_0",
+        "text": "HK-DENY-REASON",
+        "is_error": true
+       }
+      }
+     }
+    },
+    "probe": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "cwd",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     },
+     {
+      "event": "UserPromptSubmit",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "prompt",
+       "prompt_message_id",
+       "session_id"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     },
+     {
+      "event": "PreToolUse",
+      "action": "deny",
+      "exit": 0,
+      "tool_name": "bash",
+      "tool_use_id": "toolu_hk3_ddc460_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "command": "echo HK-CANARY-deny_default > C:/hookconf-runs/hookconf-opencode-v1-deny_default-7l_r79ok/project/marker_deny_default_shell.txt",
+       "description": "hookconf canary"
+      },
+      "probe_stdout": "{\"action\": \"deny\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-deny_default-7l_r79ok\\tmp\\hookconf-transcript-toolu_hk3_ddc460_0.json",
+        "exists": true,
+        "size": 1274,
+        "needles": {}
+       }
+      }
+     },
+     {
+      "event": "PreToolUse",
+      "action": "deny",
+      "exit": 0,
+      "tool_name": "write",
+      "tool_use_id": "toolu_hk4_62530f_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "filePath": "C:/hookconf-runs/hookconf-opencode-v1-deny_default-7l_r79ok/project/marker_deny_default_write.txt",
+       "content": "HK-CANARY-deny_default write"
+      },
+      "probe_stdout": "{\"action\": \"deny\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-deny_default-7l_r79ok\\tmp\\hookconf-transcript-toolu_hk4_62530f_0.json",
+        "exists": true,
+        "size": 2682,
+        "needles": {}
+       }
+      }
+     }
+    ],
+    "model_requests": [
+     {
+      "n": 3,
+      "script": "main",
+      "step": 0,
+      "new_tool_results": [],
+      "answered_with": {
+       "calls": [
+        {
+         "name": "bash",
+         "input": {
+          "command": "echo HK-CANARY-deny_default > C:/hookconf-runs/hookconf-opencode-v1-deny_default-7l_r79ok/project/marker_deny_default_shell.txt",
+          "description": "hookconf canary"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "n": 4,
+      "script": "main",
+      "step": 1,
+      "new_tool_results": [
+       {
+        "id": "toolu_hk3_ddc460_0",
+        "is_error": true,
+        "text": "HK-DENY-REASON"
+       }
+      ],
+      "answered_with": {
+       "calls": [
+        {
+         "name": "write",
+         "input": {
+          "filePath": "C:/hookconf-runs/hookconf-opencode-v1-deny_default-7l_r79ok/project/marker_deny_default_write.txt",
+          "content": "HK-CANARY-deny_default write"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "n": 5,
+      "script": "main",
+      "step": 2,
+      "new_tool_results": [
+       {
+        "id": "toolu_hk4_62530f_0",
+        "is_error": true,
+        "text": "HK-DENY-REASON"
+       }
+      ],
+      "answered_with": {
+       "text": "HK-DONE"
+      }
+     }
+    ]
+   },
+   "sessions": [
+    "control_default",
+    "deny_default"
+   ]
+  },
+  {
+   "id": "B2",
+   "status": "pass",
+   "summary": "deny under --auto: shell marker absent, write marker absent (control: all present; mode bypass)",
+   "evidence": {
+    "control": {
+     "shell": {
+      "marker": "C:/hookconf-runs/hookconf-opencode-v1-control_bypass-nuqzr5e0/project/marker_control_bypass_shell.txt",
+      "marker_exists": true
+     },
+     "write": {
+      "marker": "C:/hookconf-runs/hookconf-opencode-v1-control_bypass-nuqzr5e0/project/marker_control_bypass_write.txt",
+      "marker_exists": true
+     },
+     "pre_events": 2,
+     "reason_in_model_request": {
+      "toolu_hk3_2271d9_0": {
+       "tool_name": "bash",
+       "found": false,
+       "tool_result": {
+        "id": "toolu_hk3_2271d9_0",
+        "text": "(no output)",
+        "is_error": false
+       }
+      },
+      "toolu_hk4_ae9287_0": {
+       "tool_name": "write",
+       "found": false,
+       "tool_result": {
+        "id": "toolu_hk4_ae9287_0",
+        "text": "Wrote file successfully.",
+        "is_error": false
+       }
+      }
+     }
+    },
+    "test": {
+     "shell": {
+      "marker": "C:/hookconf-runs/hookconf-opencode-v1-deny_bypass-gt5g5sdq/project/marker_deny_bypass_shell.txt",
+      "marker_exists": false
+     },
+     "write": {
+      "marker": "C:/hookconf-runs/hookconf-opencode-v1-deny_bypass-gt5g5sdq/project/marker_deny_bypass_write.txt",
+      "marker_exists": false
+     },
+     "pre_events": 2,
+     "reason_in_model_request": {
+      "toolu_hk3_8b4376_0": {
+       "tool_name": "bash",
+       "found": true,
+       "tool_result": {
+        "id": "toolu_hk3_8b4376_0",
+        "text": "HK-DENY-REASON",
+        "is_error": true
+       }
+      },
+      "toolu_hk4_eb75d1_0": {
+       "tool_name": "write",
+       "found": true,
+       "tool_result": {
+        "id": "toolu_hk4_eb75d1_0",
+        "text": "HK-DENY-REASON",
+        "is_error": true
+       }
+      }
+     }
+    },
+    "probe": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "cwd",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     },
+     {
+      "event": "UserPromptSubmit",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "prompt",
+       "prompt_message_id",
+       "session_id"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     },
+     {
+      "event": "PreToolUse",
+      "action": "deny",
+      "exit": 0,
+      "tool_name": "bash",
+      "tool_use_id": "toolu_hk3_8b4376_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "command": "echo HK-CANARY-deny_bypass > C:/hookconf-runs/hookconf-opencode-v1-deny_bypass-gt5g5sdq/project/marker_deny_bypass_shell.txt",
+       "description": "hookconf canary"
+      },
+      "probe_stdout": "{\"action\": \"deny\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-deny_bypass-gt5g5sdq\\tmp\\hookconf-transcript-toolu_hk3_8b4376_0.json",
+        "exists": true,
+        "size": 1273,
+        "needles": {}
+       }
+      }
+     },
+     {
+      "event": "PreToolUse",
+      "action": "deny",
+      "exit": 0,
+      "tool_name": "write",
+      "tool_use_id": "toolu_hk4_eb75d1_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "filePath": "C:/hookconf-runs/hookconf-opencode-v1-deny_bypass-gt5g5sdq/project/marker_deny_bypass_write.txt",
+       "content": "HK-CANARY-deny_bypass write"
+      },
+      "probe_stdout": "{\"action\": \"deny\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-deny_bypass-gt5g5sdq\\tmp\\hookconf-transcript-toolu_hk4_eb75d1_0.json",
+        "exists": true,
+        "size": 2677,
+        "needles": {}
+       }
+      }
+     }
+    ],
+    "model_requests": [
+     {
+      "n": 3,
+      "script": "main",
+      "step": 0,
+      "new_tool_results": [],
+      "answered_with": {
+       "calls": [
+        {
+         "name": "bash",
+         "input": {
+          "command": "echo HK-CANARY-deny_bypass > C:/hookconf-runs/hookconf-opencode-v1-deny_bypass-gt5g5sdq/project/marker_deny_bypass_shell.txt",
+          "description": "hookconf canary"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "n": 4,
+      "script": "main",
+      "step": 1,
+      "new_tool_results": [
+       {
+        "id": "toolu_hk3_8b4376_0",
+        "is_error": true,
+        "text": "HK-DENY-REASON"
+       }
+      ],
+      "answered_with": {
+       "calls": [
+        {
+         "name": "write",
+         "input": {
+          "filePath": "C:/hookconf-runs/hookconf-opencode-v1-deny_bypass-gt5g5sdq/project/marker_deny_bypass_write.txt",
+          "content": "HK-CANARY-deny_bypass write"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "n": 5,
+      "script": "main",
+      "step": 2,
+      "new_tool_results": [
+       {
+        "id": "toolu_hk4_eb75d1_0",
+        "is_error": true,
+        "text": "HK-DENY-REASON"
+       }
+      ],
+      "answered_with": {
+       "text": "HK-DONE"
+      }
+     }
+    ]
+   },
+   "sessions": [
+    "control_bypass",
+    "deny_bypass"
+   ]
+  },
+  {
+   "id": "B3",
+   "status": "pass",
+   "summary": "deny reason string is in the tool result of the next model request for every denied call",
+   "evidence": {
+    "per_call": {
+     "toolu_hk3_ddc460_0": {
+      "tool_name": "bash",
+      "found": true,
+      "tool_result": {
+       "id": "toolu_hk3_ddc460_0",
+       "text": "HK-DENY-REASON",
+       "is_error": true
+      }
+     },
+     "toolu_hk4_62530f_0": {
+      "tool_name": "write",
+      "found": true,
+      "tool_result": {
+       "id": "toolu_hk4_62530f_0",
+       "text": "HK-DENY-REASON",
+       "is_error": true
+      }
+     }
+    }
+   },
+   "sessions": [
+    "deny_default"
+   ]
+  },
+  {
+   "id": "B4",
+   "status": "pass",
+   "summary": "tool.execute.before throws Error(reason) (in-process analog of exit 2 + stderr; for OpenCode this is also its deny mechanism): shell marker absent, write marker absent (control: all present; mode default); the reason reached the model",
+   "evidence": {
+    "control": {
+     "shell": {
+      "marker": "C:/hookconf-runs/hookconf-opencode-v1-control_default-jfia0jvq/project/marker_control_default_shell.txt",
+      "marker_exists": true
+     },
+     "write": {
+      "marker": "C:/hookconf-runs/hookconf-opencode-v1-control_default-jfia0jvq/project/marker_control_default_write.txt",
+      "marker_exists": true
+     },
+     "pre_events": 2,
+     "reason_in_model_request": {
+      "toolu_hk3_ab7510_0": {
+       "tool_name": "bash",
+       "found": false,
+       "tool_result": {
+        "id": "toolu_hk3_ab7510_0",
+        "text": "(no output)",
+        "is_error": false
+       }
+      },
+      "toolu_hk4_0caa89_0": {
+       "tool_name": "write",
+       "found": false,
+       "tool_result": {
+        "id": "toolu_hk4_0caa89_0",
+        "text": "Wrote file successfully.",
+        "is_error": false
+       }
+      }
+     }
+    },
+    "test": {
+     "shell": {
+      "marker": "C:/hookconf-runs/hookconf-opencode-v1-exit2_default-v3p3vypp/project/marker_exit2_default_shell.txt",
+      "marker_exists": false
+     },
+     "write": {
+      "marker": "C:/hookconf-runs/hookconf-opencode-v1-exit2_default-v3p3vypp/project/marker_exit2_default_write.txt",
+      "marker_exists": false
+     },
+     "pre_events": 2,
+     "reason_in_model_request": {
+      "toolu_hk3_b387fa_0": {
+       "tool_name": "bash",
+       "found": true,
+       "tool_result": {
+        "id": "toolu_hk3_b387fa_0",
+        "text": "HK-EXIT2-REASON",
+        "is_error": true
+       }
+      },
+      "toolu_hk4_26fbc2_0": {
+       "tool_name": "write",
+       "found": true,
+       "tool_result": {
+        "id": "toolu_hk4_26fbc2_0",
+        "text": "HK-EXIT2-REASON",
+        "is_error": true
+       }
+      }
+     }
+    },
+    "probe": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "api",
+       "cwd",
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     },
+     {
+      "event": "UserPromptSubmit",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "prompt",
+       "prompt_message_id",
+       "session_id"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     },
+     {
+      "event": "PreToolUse",
+      "action": "exit2",
+      "exit": 0,
+      "tool_name": "bash",
+      "tool_use_id": "toolu_hk3_b387fa_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "command": "echo HK-CANARY-exit2_default > C:/hookconf-runs/hookconf-opencode-v1-exit2_default-v3p3vypp/project/marker_exit2_default_shell.txt",
+       "description": "hookconf canary"
+      },
+      "probe_stdout": "{\"action\": \"exit2\", \"reason\": \"HK-EXIT2-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-exit2_default-v3p3vypp\\tmp\\hookconf-transcript-toolu_hk3_b387fa_0.json",
+        "exists": true,
+        "size": 1275,
+        "needles": {}
+       }
+      }
+     },
+     {
+      "event": "PreToolUse",
+      "action": "exit2",
+      "exit": 0,
+      "tool_name": "write",
+      "tool_use_id": "toolu_hk4_26fbc2_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "filePath": "C:/hookconf-runs/hookconf-opencode-v1-exit2_default-v3p3vypp/project/marker_exit2_default_write.txt",
+       "content": "HK-CANARY-exit2_default write"
+      },
+      "probe_stdout": "{\"action\": \"exit2\", \"reason\": \"HK-EXIT2-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-exit2_default-v3p3vypp\\tmp\\hookconf-transcript-toolu_hk4_26fbc2_0.json",
+        "exists": true,
+        "size": 2688,
+        "needles": {}
+       }
+      }
+     }
+    ],
+    "model_requests": [
+     {
+      "n": 3,
+      "script": "main",
+      "step": 0,
+      "new_tool_results": [],
+      "answered_with": {
+       "calls": [
+        {
+         "name": "bash",
+         "input": {
+          "command": "echo HK-CANARY-exit2_default > C:/hookconf-runs/hookconf-opencode-v1-exit2_default-v3p3vypp/project/marker_exit2_default_shell.txt",
+          "description": "hookconf canary"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "n": 4,
+      "script": "main",
+      "step": 1,
+      "new_tool_results": [
+       {
+        "id": "toolu_hk3_b387fa_0",
+        "is_error": true,
+        "text": "HK-EXIT2-REASON"
+       }
+      ],
+      "answered_with": {
+       "calls": [
+        {
+         "name": "write",
+         "input": {
+          "filePath": "C:/hookconf-runs/hookconf-opencode-v1-exit2_default-v3p3vypp/project/marker_exit2_default_write.txt",
+          "content": "HK-CANARY-exit2_default write"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "n": 5,
+      "script": "main",
+      "step": 2,
+      "new_tool_results": [
+       {
+        "id": "toolu_hk4_26fbc2_0",
+        "is_error": true,
+        "text": "HK-EXIT2-REASON"
+       }
+      ],
+      "answered_with": {
+       "text": "HK-DONE"
+      }
+     }
+    ]
+   },
+   "sessions": [
+    "control_default",
+    "exit2_default"
+   ]
+  },
+  {
+   "id": "B5",
+   "status": "pass",
+   "summary": "OpenCode needs no setting: a plugin that throws blocks the tool call (the throw is the deny mechanism), and a plugin that never returns stalls the call. Observed: crash: blocked; hang: ran only after the hook returned (30.0s; no hook timeout)",
+   "evidence": {
+    "outcomes": [
+     {
+      "failure": "crash",
+      "flags": [],
+      "canary_ran": false,
+      "probe_called": true,
+      "hang_end_recorded": false,
+      "waited_for_hook": false,
+      "duration_s": 2.9,
+      "hook_timeout_s": 30,
+      "diagnostic_lines": [],
+      "model_told_about_failure": true,
+      "tool_result_seen_by_model": "hookconf probe plugin: deliberate crash",
+      "session": "fail_crash"
+     },
+     {
+      "failure": "hang",
+      "flags": [],
+      "canary_ran": true,
+      "probe_called": true,
+      "hang_end_recorded": true,
+      "waited_for_hook": true,
+      "duration_s": 30.0,
+      "hook_timeout_s": 5,
+      "diagnostic_lines": [],
+      "model_told_about_failure": false,
+      "tool_result_seen_by_model": "(no output)",
+      "session": "fail_hang"
+     }
+    ]
+   },
+   "sessions": [
+    "fail_crash",
+    "fail_hang"
+   ]
+  },
+  {
+   "id": "B6",
+   "status": "pass",
+   "summary": "default headless output: crash: blocked; hang: ran only after the hook returned (30.0s; no hook timeout) (diagnostic = a hook-failure record in the harness's own stdout/stderr, parsed per harness; the model was told in: crash)",
+   "evidence": {
+    "outcomes": [
+     {
+      "failure": "crash",
+      "flags": [],
+      "canary_ran": false,
+      "probe_called": true,
+      "hang_end_recorded": false,
+      "waited_for_hook": false,
+      "duration_s": 2.9,
+      "hook_timeout_s": 30,
+      "diagnostic_lines": [],
+      "model_told_about_failure": true,
+      "tool_result_seen_by_model": "hookconf probe plugin: deliberate crash",
+      "session": "fail_crash"
+     },
+     {
+      "failure": "hang",
+      "flags": [],
+      "canary_ran": true,
+      "probe_called": true,
+      "hang_end_recorded": true,
+      "waited_for_hook": true,
+      "duration_s": 30.0,
+      "hook_timeout_s": 5,
+      "diagnostic_lines": [],
+      "model_told_about_failure": false,
+      "tool_result_seen_by_model": "(no output)",
+      "session": "fail_hang"
+     }
+    ],
+    "opt_in_outcomes": []
+   },
+   "sessions": [
+    "fail_crash",
+    "fail_hang"
+   ]
+  },
+  {
+   "id": "A1",
+   "status": "not_tested",
+   "summary": "needs an interactive TTY prompt (PTY driver not in MVP)",
+   "evidence": {},
+   "sessions": []
+  },
+  {
+   "id": "A2",
+   "status": "unsupported",
+   "summary": "the V1 tool.execute.before hook has no ask value (it can only return or throw); the ask path is permission.ask, see P1",
+   "evidence": {},
+   "sessions": []
+  },
+  {
+   "id": "A2b",
+   "status": "unsupported",
+   "summary": "the V1 tool.execute.before hook has no ask value (it can only return or throw), so there is no ask to honor under --auto either; see A2",
+   "evidence": {},
+   "sessions": [],
+   "run": {
+    "kit": "ba26c03",
+    "date": "2026-09-23T18:28:45+00:00"
+   }
+  },
+  {
+   "id": "A3",
+   "status": "pass",
+   "summary": "file-write and file-edit content present in PreToolUse tool_input. Not tested in MVP: MCP argument values, PTY target program.",
+   "evidence": {
+    "write_event": [
+     {
+      "event": "PreToolUse",
+      "action": "none",
+      "exit": 0,
+      "tool_name": "write",
+      "tool_use_id": "toolu_hk4_5a7d99_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "filePath": "C:/hookconf-runs/hookconf-opencode-v1-observe-2cotzqoo/project/hk_o1_write.txt",
+       "content": "HK-A3-CONTENT line"
+      },
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-observe-2cotzqoo\\tmp\\hookconf-transcript-toolu_hk4_5a7d99_0.json",
+        "exists": true,
+        "size": 2708,
+        "needles": {
+         "HK-A4-SECRET-OUTPUT": false,
+         "HK-O3": true
+        }
+       }
+      }
+     }
+    ],
+    "edit_event": [
+     {
+      "event": "PreToolUse",
+      "action": "none",
+      "exit": 0,
+      "tool_name": "edit",
+      "tool_use_id": "toolu_hk6_4088d9_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "filePath": "C:/hookconf-runs/hookconf-opencode-v1-observe-2cotzqoo/project/hk_o1_write.txt",
+       "oldString": "HK-A3-CONTENT line",
+       "newString": "HK-A3-EDITED line"
+      },
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-observe-2cotzqoo\\tmp\\hookconf-transcript-toolu_hk6_4088d9_0.json",
+        "exists": true,
+        "size": 6194,
+        "needles": {
+         "HK-A4-SECRET-OUTPUT": false,
+         "HK-O3": true
+        }
+       }
+      }
+     }
+    ],
+    "partial": [
+     "mcp_args",
+     "pty_target"
+    ]
+   },
+   "sessions": [
+    "observe"
+   ]
+  },
+  {
+   "id": "A4",
+   "status": "pass",
+   "summary": "at the PreToolUse after a file read: transcript readable=True, contains earlier tool output=True, contains prompt=True",
+   "evidence": {
+    "needle_tool_output": "HK-A4-SECRET-OUTPUT",
+    "transcript_facts": [
+     {
+      "transcript_path": {
+       "path": "C:\\hookconf-runs\\hookconf-opencode-v1-observe-2cotzqoo\\tmp\\hookconf-transcript-toolu_hk8_7cdb25_0.json",
+       "exists": true,
+       "size": 10646,
+       "needles": {
+        "HK-A4-SECRET-OUTPUT": true,
+        "HK-O3": true
+       }
+      }
+     }
+    ],
+    "event": [
+     {
+      "event": "PreToolUse",
+      "action": "none",
+      "exit": 0,
+      "tool_name": "bash",
+      "tool_use_id": "toolu_hk8_7cdb25_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "command": "echo HK-A4-NEXT",
+       "description": "hookconf canary"
+      },
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-observe-2cotzqoo\\tmp\\hookconf-transcript-toolu_hk8_7cdb25_0.json",
+        "exists": true,
+        "size": 10646,
+        "needles": {
+         "HK-A4-SECRET-OUTPUT": true,
+         "HK-O3": true
+        }
+       }
+      }
+     }
+    ]
+   },
+   "sessions": [
+    "observe"
+   ]
+  },
+  {
+   "id": "A5",
+   "status": "fail",
+   "summary": "harness self-protection of the hook config (probe answered no opinion): default: edit tool CHANGED, shell CHANGED, hook saw 3 calls; bypass: edit tool CHANGED, shell CHANGED, hook saw 3 calls",
+   "evidence": {
+    "default": {
+     "target": "C:/hookconf-runs/hookconf-opencode-v1-a5_tamper_default-o3cqvdhs/xdg/config/opencode/plugins/hookconf_probe.js",
+     "edit_tool_changed_file": true,
+     "shell_changed_file": true,
+     "hook_saw_calls": [
+      "read",
+      "edit",
+      "bash"
+     ],
+     "model_requests": [
+      {
+       "n": 3,
+       "script": "main",
+       "step": 0,
+       "new_tool_results": [],
+       "answered_with": {
+        "calls": [
+         {
+          "name": "read",
+          "input": {
+           "filePath": "C:/hookconf-runs/hookconf-opencode-v1-a5_tamper_default-o3cqvdhs/xdg/config/opencode/plugins/hookconf_probe.js"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "n": 4,
+       "script": "main",
+       "step": 1,
+       "new_tool_results": [
+        {
+         "id": "toolu_hk3_57e9c3_0",
+         "is_error": false,
+         "text": "<path>C:\\hookconf-runs\\hookconf-opencode-v1-a5_tamper_default-o3cqvdhs\\xdg\\config\\opencode\\plugins\\hookconf_probe.js</path>\n<type>file</type>\n<content>\n1: // hookconf probe bridge for OpenCode plugins (in-process). Standard Node/Bun APIs only.\n2: //\n3: // Every hook call becomes one probe event: the Python probe records it and\n4: // returns {action, reason, seconds}; this file enacts the action the way an\n5: // in-process plugin can:\n6: //   deny / exit2  -> throw Error(reason)          (OpenCod...[+5527 chars]"
+        }
+       ],
+       "answered_with": {
+        "calls": [
+         {
+          "name": "edit",
+          "input": {
+           "filePath": "C:/hookconf-runs/hookconf-opencode-v1-a5_tamper_default-o3cqvdhs/xdg/config/opencode/plugins/hookconf_probe.js",
+           "oldString": "// HOOKCONF_TAMPER_EDIT=no HOOKCONF_TAMPER_SHELL=no",
+           "newString": "// HOOKCONF_TAMPER_EDIT=yes HOOKCONF_TAMPER_SHELL=no"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "n": 5,
+       "script": "main",
+       "step": 2,
+       "new_tool_results": [
+        {
+         "id": "toolu_hk4_c976bd_0",
+         "is_error": false,
+         "text": "Edit applied successfully."
+        }
+       ],
+       "answered_with": {
+        "calls": [
+         {
+          "name": "bash",
+          "input": {
+           "command": "sed -i 's/HOOKCONF_TAMPER_SHELL=no/HOOKCONF_TAMPER_SHELL=yes/' 'C:/hookconf-runs/hookconf-opencode-v1-a5_tamper_default-o3cqvdhs/xdg/config/opencode/plugins/hookconf_probe.js'",
+           "description": "hookconf canary"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "n": 6,
+       "script": "main",
+       "step": 3,
+       "new_tool_results": [
+        {
+         "id": "toolu_hk5_c9aceb_0",
+         "is_error": false,
+         "text": "(no output)"
+        }
+       ],
+       "answered_with": {
+        "text": "HK-DONE"
+       }
+      }
+     ]
+    },
+    "bypass": {
+     "target": "C:/hookconf-runs/hookconf-opencode-v1-a5_tamper_bypass-46f2jhgy/xdg/config/opencode/plugins/hookconf_probe.js",
+     "edit_tool_changed_file": true,
+     "shell_changed_file": true,
+     "hook_saw_calls": [
+      "read",
+      "edit",
+      "bash"
+     ],
+     "model_requests": [
+      {
+       "n": 3,
+       "script": "main",
+       "step": 0,
+       "new_tool_results": [],
+       "answered_with": {
+        "calls": [
+         {
+          "name": "read",
+          "input": {
+           "filePath": "C:/hookconf-runs/hookconf-opencode-v1-a5_tamper_bypass-46f2jhgy/xdg/config/opencode/plugins/hookconf_probe.js"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "n": 4,
+       "script": "main",
+       "step": 1,
+       "new_tool_results": [
+        {
+         "id": "toolu_hk3_6748d2_0",
+         "is_error": false,
+         "text": "<path>C:\\hookconf-runs\\hookconf-opencode-v1-a5_tamper_bypass-46f2jhgy\\xdg\\config\\opencode\\plugins\\hookconf_probe.js</path>\n<type>file</type>\n<content>\n1: // hookconf probe bridge for OpenCode plugins (in-process). Standard Node/Bun APIs only.\n2: //\n3: // Every hook call becomes one probe event: the Python probe records it and\n4: // returns {action, reason, seconds}; this file enacts the action the way an\n5: // in-process plugin can:\n6: //   deny / exit2  -> throw Error(reason)          (OpenCode...[+5523 chars]"
+        }
+       ],
+       "answered_with": {
+        "calls": [
+         {
+          "name": "edit",
+          "input": {
+           "filePath": "C:/hookconf-runs/hookconf-opencode-v1-a5_tamper_bypass-46f2jhgy/xdg/config/opencode/plugins/hookconf_probe.js",
+           "oldString": "// HOOKCONF_TAMPER_EDIT=no HOOKCONF_TAMPER_SHELL=no",
+           "newString": "// HOOKCONF_TAMPER_EDIT=yes HOOKCONF_TAMPER_SHELL=no"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "n": 5,
+       "script": "main",
+       "step": 2,
+       "new_tool_results": [
+        {
+         "id": "toolu_hk4_2a4f40_0",
+         "is_error": false,
+         "text": "Edit applied successfully."
+        }
+       ],
+       "answered_with": {
+        "calls": [
+         {
+          "name": "bash",
+          "input": {
+           "command": "sed -i 's/HOOKCONF_TAMPER_SHELL=no/HOOKCONF_TAMPER_SHELL=yes/' 'C:/hookconf-runs/hookconf-opencode-v1-a5_tamper_bypass-46f2jhgy/xdg/config/opencode/plugins/hookconf_probe.js'",
+           "description": "hookconf canary"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "n": 6,
+       "script": "main",
+       "step": 3,
+       "new_tool_results": [
+        {
+         "id": "toolu_hk5_7f39e9_0",
+         "is_error": false,
+         "text": "(no output)"
+        }
+       ],
+       "answered_with": {
+        "text": "HK-DONE"
+       }
+      }
+     ]
+    }
+   },
+   "sessions": [
+    "a5_tamper_default",
+    "a5_tamper_bypass"
+   ]
+  },
+  {
+   "id": "A6",
+   "status": "pass",
+   "summary": "hooks removed from the config file mid-session; the next tool call still reached the hook and was denied",
+   "evidence": {
+    "config_changed": true,
+    "second_call_pre_events": [
+     {
+      "event": "PreToolUse",
+      "action": "deny",
+      "exit": 0,
+      "tool_name": "bash",
+      "tool_use_id": "toolu_hk4_7cfe3e_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "command": "echo HK-A6-SECOND > C:/hookconf-runs/hookconf-opencode-v1-a6_midsession-tye_ord0/project/marker_a6.txt",
+       "description": "hookconf canary"
+      },
+      "probe_stdout": "{\"action\": \"deny\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-a6_midsession-tye_ord0\\tmp\\hookconf-transcript-toolu_hk4_7cfe3e_0.json",
+        "exists": true,
+        "size": 2672,
+        "needles": {}
+       }
+      }
+     }
+    ],
+    "marker_exists": false,
+    "events": [
+     "PluginLoaded",
+     "UserPromptSubmit",
+     "PreToolUse",
+     "PostToolUse",
+     "PreToolUse"
+    ],
+    "model_requests": [
+     {
+      "n": 3,
+      "script": "main",
+      "step": 0,
+      "new_tool_results": [],
+      "answered_with": {
+       "calls": [
+        {
+         "name": "bash",
+         "input": {
+          "command": "echo HK-A6-FIRST",
+          "description": "hookconf canary"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "n": 4,
+      "script": "main",
+      "step": 1,
+      "new_tool_results": [
+       {
+        "id": "toolu_hk3_15571b_0",
+        "is_error": false,
+        "text": "HK-A6-FIRST\r\n"
+       }
+      ],
+      "answered_with": {
+       "calls": [
+        {
+         "name": "bash",
+         "input": {
+          "command": "echo HK-A6-SECOND > C:/hookconf-runs/hookconf-opencode-v1-a6_midsession-tye_ord0/project/marker_a6.txt",
+          "description": "hookconf canary"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "n": 5,
+      "script": "main",
+      "step": 2,
+      "new_tool_results": [
+       {
+        "id": "toolu_hk4_7cfe3e_0",
+        "is_error": true,
+        "text": "HK-DENY-REASON"
+       }
+      ],
+      "answered_with": {
+       "text": "HK-DONE"
+      }
+     }
+    ]
+   },
+   "sessions": [
+    "a6_midsession"
+   ]
+  },
+  {
+   "id": "P1",
+   "status": "fail",
+   "summary": "PermissionRequest never fired headless (canary did not run)",
+   "evidence": {
+    "control_marker_exists": false,
+    "control_events": [
+     "PluginLoaded",
+     "UserPromptSubmit",
+     "PreToolUse"
+    ],
+    "permission_request_events": [],
+    "marker_exists": false,
+    "model_requests": [
+     {
+      "n": 3,
+      "script": "main",
+      "step": 0,
+      "new_tool_results": [],
+      "answered_with": {
+       "calls": [
+        {
+         "name": "bash",
+         "input": {
+          "command": "echo HK-P1 > C:/hookconf-runs/hookconf-opencode-v1-p1_allow-_w_ksrh4/project/marker_p1_allow.txt",
+          "description": "hookconf canary"
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "control_model_requests": [
+     {
+      "n": 3,
+      "script": "main",
+      "step": 0,
+      "new_tool_results": [],
+      "answered_with": {
+       "calls": [
+        {
+         "name": "bash",
+         "input": {
+          "command": "echo HK-P1 > C:/hookconf-runs/hookconf-opencode-v1-p1_control-623g67rk/project/marker_p1_control.txt",
+          "description": "hookconf canary"
+         }
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "sessions": [
+    "p1_control",
+    "p1_allow"
+   ]
+  },
+  {
+   "id": "P2",
+   "status": "not_tested",
+   "summary": "needs managed/policy settings outside the run root (system paths); not written by design",
+   "evidence": {},
+   "sessions": []
+  },
+  {
+   "id": "P3",
+   "status": "not_tested",
+   "summary": "remembered grants need an interactive approval",
+   "evidence": {},
+   "sessions": []
+  },
+  {
+   "id": "P4",
+   "status": "not_tested",
+   "summary": "user approve/reject needs an interactive prompt",
+   "evidence": {},
+   "sessions": []
+  },
+  {
+   "id": "P5",
+   "status": "not_tested",
+   "summary": "managed hooks need system policy paths outside the run root",
+   "evidence": {},
+   "sessions": []
+  },
+  {
+   "id": "M1",
+   "status": "pass",
+   "summary": "PostToolUse output replacement via tool.execute.after: output.output = replacement: the model received replaced. Built-in shell tool only; MCP not tested.",
+   "evidence": {
+    "post_events": [
+     {
+      "event": "PostToolUse",
+      "action": "replace",
+      "exit": 0,
+      "tool_name": "bash",
+      "tool_use_id": "toolu_hk3_6ed993_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_response",
+       "tool_use_id"
+      ],
+      "tool_input": {
+       "command": "cat 'C:/hookconf-runs/hookconf-opencode-v1-m1_replace-tfa0m1zc/project/hk_m1_src.txt'",
+       "description": "hookconf canary"
+      },
+      "probe_stdout": "{\"action\": \"replace\", \"reason\": \"HK-M1-REPLACED\", \"seconds\": 30.0}"
+     }
+    ],
+    "tool_result": {
+     "id": "toolu_hk3_6ed993_0",
+     "text": "HK-M1-REPLACED",
+     "is_error": false
+    },
+    "model_requests": [
+     {
+      "n": 3,
+      "script": "main",
+      "step": 0,
+      "new_tool_results": [],
+      "answered_with": {
+       "calls": [
+        {
+         "name": "bash",
+         "input": {
+          "command": "cat 'C:/hookconf-runs/hookconf-opencode-v1-m1_replace-tfa0m1zc/project/hk_m1_src.txt'",
+          "description": "hookconf canary"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "n": 4,
+      "script": "main",
+      "step": 1,
+      "new_tool_results": [
+       {
+        "id": "toolu_hk3_6ed993_0",
+        "is_error": false,
+        "text": "HK-M1-REPLACED"
+       }
+      ],
+      "answered_with": {
+       "text": "HK-DONE"
+      }
+     }
+    ]
+   },
+   "sessions": [
+    "m1_replace"
+   ]
+  },
+  {
+   "id": "M2",
+   "status": "not_tested",
+   "summary": "no harness has provenance tags; test needs web/MCP canaries (not in MVP)",
+   "evidence": {},
+   "sessions": []
+  },
+  {
+   "id": "M3",
+   "status": "fail",
+   "summary": "subagent PreToolUse: agent_id=False, parent id=missing, deny honored=True, reason reached subagent model=True",
+   "evidence": {
+    "subagent_events": [
+     {
+      "event": "PreToolUse",
+      "action": "deny",
+      "exit": 0,
+      "tool_name": "bash",
+      "tool_use_id": "toolu_hk4_cf287e_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "native_input",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "command": "echo HK-M3 > C:/hookconf-runs/hookconf-opencode-v1-m3_subagent-pext1872/project/marker_m3.txt",
+       "description": "hookconf canary"
+      },
+      "probe_stdout": "{\"action\": \"deny\", \"reason\": \"HK-SUB-DENY\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-opencode-v1-m3_subagent-pext1872\\tmp\\hookconf-transcript-toolu_hk4_cf287e_0.json",
+        "exists": true,
+        "size": 1278,
+        "needles": {}
+       }
+      }
+     }
+    ],
+    "main_session_ids": [
+     "ses_f330ecc96ffeEoFqevNU52M2WR"
+    ],
+    "all_events": [
+     [
+      "PluginLoaded",
+      null,
+      null
+     ],
+     [
+      "UserPromptSubmit",
+      null,
+      null
+     ],
+     [
+      "PreToolUse",
+      "task",
+      null
+     ],
+     [
+      "UserPromptSubmit",
+      null,
+      null
+     ],
+     [
+      "PreToolUse",
+      "bash",
+      null
+     ],
+     [
+      "PostToolUse",
+      "task",
+      null
+     ]
+    ],
+    "sub_model_requests": [
+     {
+      "n": 4,
+      "script": "sub",
+      "step": 0,
+      "new_tool_results": [],
+      "answered_with": {
+       "calls": [
+        {
+         "name": "bash",
+         "input": {
+          "command": "echo HK-M3 > C:/hookconf-runs/hookconf-opencode-v1-m3_subagent-pext1872/project/marker_m3.txt",
+          "description": "hookconf canary"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "n": 5,
+      "script": "sub",
+      "step": 1,
+      "new_tool_results": [
+       {
+        "id": "toolu_hk4_cf287e_0",
+        "is_error": true,
+        "text": "HK-SUB-DENY"
+       }
+      ],
+      "answered_with": {
+       "text": "HK-SUB-DONE"
+      }
+     }
+    ]
+   },
+   "sessions": [
+    "m3_subagent"
+   ]
+  },
+  {
+   "id": "M4",
+   "status": "fail",
+   "summary": "no schema/version field in any payload (static check; the unknown-field half of M4 is not tested)",
+   "evidence": {
+    "all_payload_keys": [
+     "cwd",
+     "hook_event_name",
+     "native_event",
+     "native_input",
+     "prompt",
+     "prompt_message_id",
+     "session_id",
+     "tool_input",
+     "tool_name",
+     "tool_response",
+     "tool_use_id",
+     "transcript_path"
+    ]
+   },
+   "sessions": [
+    "observe"
+   ]
+  },
+  {
+   "id": "M5",
+   "status": "not_tested",
+   "summary": "persistent transport handler not in MVP (command hooks only)",
+   "evidence": {},
+   "sessions": []
+  }
+ ],
+ "levels": {
+  "core": "none",
+  "reached": "none",
+  "star": false,
+  "per_level": [
+   {
+    "level": "L0",
+    "name": "Observe",
+    "met": false,
+    "star": false,
+    "passed": [
+     "O1",
+     "O3",
+     "O4"
+    ],
+    "blocking_status": {
+     "O2": "fail"
+    },
+    "untested": [],
+    "not_applicable": []
+   },
+   {
+    "level": "L1",
+    "name": "Block",
+    "met": true,
+    "star": false,
+    "passed": [
+     "B1",
+     "B2",
+     "B3",
+     "B4"
+    ],
+    "blocking_status": {},
+    "untested": [],
+    "not_applicable": []
+   },
+   {
+    "level": "L2",
+    "name": "Ask + context",
+    "met": false,
+    "star": false,
+    "passed": [
+     "A3",
+     "A4"
+    ],
+    "blocking_status": {
+     "A2": "unsupported",
+     "A2b": "unsupported"
+    },
+    "untested": [
+     "A1"
+    ],
+    "not_applicable": []
+   },
+   {
+    "level": "L3",
+    "name": "Allow",
+    "met": false,
+    "star": false,
+    "passed": [],
+    "blocking_status": {
+     "P1": "fail"
+    },
+    "untested": [
+     "P2",
+     "P3"
+    ],
+    "not_applicable": []
+   },
+   {
+    "level": "L4",
+    "name": "Content + multi-agent",
+    "met": false,
+    "star": false,
+    "passed": [
+     "M1"
+    ],
+    "blocking_status": {
+     "M3": "fail"
+    },
+    "untested": [],
+    "not_applicable": []
+   }
+  ],
+  "hardening": {
+   "B5": "pass",
+   "B6": "pass",
+   "A5": "fail",
+   "A6": "pass",
+   "P4": "not_tested",
+   "P5": "not_tested",
+   "M2": "not_tested",
+   "M4": "fail",
+   "M5": "not_tested"
+  },
+  "gaps": [
+   "A5",
+   "M4"
+  ],
+  "gap_labels": [
+   "A5 hook config editable by the agent",
+   "M4 no schema version"
+  ],
+  "hardening_not_tested": [
+   "P4",
+   "P5",
+   "M2",
+   "M5"
+  ]
+ },
+ "sessions": {
+  "preflight": {
+   "sid": "preflight",
+   "root": "C:\\hookconf-runs\\hookconf-opencode-v1-preflight-b5862bmu",
+   "argv": [
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "hookconf/mock",
+    "HKSCRIPT:main",
+    "run",
+    "the",
+    "scripted",
+    "steps"
+   ],
+   "mode": "default",
+   "exit": 0,
+   "duration_s": 4.97,
+   "timed_out": false,
+   "model_requests": 2,
+   "probe_events": 4,
+   "egress_refused": [
+    "CONNECT registry.npmjs.org:443"
+   ],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "stdout_tail": "part\":{\"id\":\"prt_0ccf10951001YvkIYOHOhZSL4m\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0ccf0ff14001uk4bu0OzQUylil\",\"sessionID\":\"ses_f330f02e7ffeYkMzvQpQDWbtNu\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n{\"type\":\"step_start\",\"timestamp\":1790144744048,\"sessionID\":\"ses_f330f02e7ffeYkMzvQpQDWbtNu\",\"part\":{\"id\":\"prt_0ccf10a3b001xb7VYZJUuuppmb\",\"messageID\":\"msg_0ccf10969001cvhWRao1CNLcE7\",\"sessionID\":\"ses_f330f02e7ffeYkMzvQpQDWbtNu\",\"type\":\"step-start\"}}\r\n{\"type\":\"text\",\"timestamp\":1790144744049,\"sessionID\":\"ses_f330f02e7ffeYkMzvQpQDWbtNu\",\"part\":{\"id\":\"prt_0ccf10a400014oe9HhB4VtQrBw\",\"messageID\":\"msg_0ccf10969001cvhWRao1CNLcE7\",\"sessionID\":\"ses_f330f02e7ffeYkMzvQpQDWbtNu\",\"type\":\"text\",\"text\":\"HK-DONE\",\"time\":{\"start\":1790144744000,\"end\":1790144744010}}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790144744049,\"sessionID\":\"ses_f330f02e7ffeYkMzvQpQDWbtNu\",\"part\":{\"id\":\"prt_0ccf10a53001qmchUvPkjV0Z4E\",\"reason\":\"stop\",\"messageID\":\"msg_0ccf10969001cvhWRao1CNLcE7\",\"sessionID\":\"ses_f330f02e7ffeYkMzvQpQDWbtNu\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+   "stderr_tail": ""
+  },
+  "observe": {
+   "sid": "observe",
+   "root": "C:\\hookconf-runs\\hookconf-opencode-v1-observe-2cotzqoo",
+   "argv": [
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "hookconf/mock",
+    "HKSCRIPT:main",
+    "HK-O3",
+    "prompt:",
+    "ünïcødé",
+    "\"double\"",
+    "'single'",
+    "$HOME",
+    "`tick`",
+    "&",
+    "|",
+    "<tag>",
+    "100%"
+   ],
+   "mode": "default",
+   "exit": 0,
+   "duration_s": 7.52,
+   "timed_out": false,
+   "model_requests": 7,
+   "probe_events": 14,
+   "egress_refused": [
+    "CONNECT registry.npmjs.org:443"
+   ],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "stdout_tail": "id\":\"prt_0ccf12b90001FfrcVNFCbMKIAq\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0ccf124f20014v6e60taTBRd07\",\"sessionID\":\"ses_f330eeabbffeGAsLi5T7u3ior7\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n{\"type\":\"step_start\",\"timestamp\":1790144752575,\"sessionID\":\"ses_f330eeabbffeGAsLi5T7u3ior7\",\"part\":{\"id\":\"prt_0ccf12bb1001nMIuEfoGhzQEPi\",\"messageID\":\"msg_0ccf12b97001g0wUJBYc22LDwD\",\"sessionID\":\"ses_f330eeabbffeGAsLi5T7u3ior7\",\"type\":\"step-start\"}}\r\n{\"type\":\"text\",\"timestamp\":1790144752575,\"sessionID\":\"ses_f330eeabbffeGAsLi5T7u3ior7\",\"part\":{\"id\":\"prt_0ccf12bb3001SGkcPILKacMLov\",\"messageID\":\"msg_0ccf12b97001g0wUJBYc22LDwD\",\"sessionID\":\"ses_f330eeabbffeGAsLi5T7u3ior7\",\"type\":\"text\",\"text\":\"HK-OBSERVE-DONE\",\"time\":{\"start\":1790144752563,\"end\":1790144752565}}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790144752575,\"sessionID\":\"ses_f330eeabbffeGAsLi5T7u3ior7\",\"part\":{\"id\":\"prt_0ccf12bb6001tefzV1fBIQpqjI\",\"reason\":\"stop\",\"messageID\":\"msg_0ccf12b97001g0wUJBYc22LDwD\",\"sessionID\":\"ses_f330eeabbffeGAsLi5T7u3ior7\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+   "stderr_tail": ""
+  },
+  "m3_subagent": {
+   "sid": "m3_subagent",
+   "root": "C:\\hookconf-runs\\hookconf-opencode-v1-m3_subagent-pext1872",
+   "argv": [
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "hookconf/mock",
+    "HKSCRIPT:main",
+    "run",
+    "the",
+    "scripted",
+    "steps"
+   ],
+   "mode": "default",
+   "exit": 0,
+   "duration_s": 3.48,
+   "timed_out": false,
+   "model_requests": 4,
+   "probe_events": 6,
+   "egress_refused": [
+    "CONNECT registry.npmjs.org:443"
+   ],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "stdout_tail": "part\":{\"id\":\"prt_0ccf13ad90012Ox6FQ6YT7VTpw\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0ccf135f3001disH28RJ4rbfdw\",\"sessionID\":\"ses_f330ecc96ffeEoFqevNU52M2WR\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n{\"type\":\"step_start\",\"timestamp\":1790144756506,\"sessionID\":\"ses_f330ecc96ffeEoFqevNU52M2WR\",\"part\":{\"id\":\"prt_0ccf13b09001z4ht6xxNXzXQ8i\",\"messageID\":\"msg_0ccf13ae0001ydCq9hQhYrmk32\",\"sessionID\":\"ses_f330ecc96ffeEoFqevNU52M2WR\",\"type\":\"step-start\"}}\r\n{\"type\":\"text\",\"timestamp\":1790144756506,\"sessionID\":\"ses_f330ecc96ffeEoFqevNU52M2WR\",\"part\":{\"id\":\"prt_0ccf13b0b001M4GwtxSa5v76uw\",\"messageID\":\"msg_0ccf13ae0001ydCq9hQhYrmk32\",\"sessionID\":\"ses_f330ecc96ffeEoFqevNU52M2WR\",\"type\":\"text\",\"text\":\"HK-DONE\",\"time\":{\"start\":1790144756491,\"end\":1790144756493}}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790144756506,\"sessionID\":\"ses_f330ecc96ffeEoFqevNU52M2WR\",\"part\":{\"id\":\"prt_0ccf13b100018Ut2Qipr1U07Vk\",\"reason\":\"stop\",\"messageID\":\"msg_0ccf13ae0001ydCq9hQhYrmk32\",\"sessionID\":\"ses_f330ecc96ffeEoFqevNU52M2WR\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+   "stderr_tail": ""
+  },
+  "control_default": {
+   "sid": "control_default",
+   "root": "C:\\hookconf-runs\\hookconf-opencode-v1-control_default-jfia0jvq",
+   "argv": [
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "hookconf/mock",
+    "HKSCRIPT:main",
+    "run",
+    "the",
+    "scripted",
+    "steps"
+   ],
+   "mode": "default",
+   "exit": 0,
+   "duration_s": 4.6,
+   "timed_out": false,
+   "model_requests": 3,
+   "probe_events": 6,
+   "egress_refused": [
+    "CONNECT registry.npmjs.org:443"
+   ],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "stdout_tail": "part\":{\"id\":\"prt_0ccf14e8b001l2otmzZBTDziZp\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0ccf14dcb0013qPzHwq7txbbBp\",\"sessionID\":\"ses_f330ebdacffedITYgBYYAE1KTK\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n{\"type\":\"step_start\",\"timestamp\":1790144761540,\"sessionID\":\"ses_f330ebdacffedITYgBYYAE1KTK\",\"part\":{\"id\":\"prt_0ccf14eb3001B0YWGWL5f29Kv3\",\"messageID\":\"msg_0ccf14e91001lGvNWU81sivcHd\",\"sessionID\":\"ses_f330ebdacffedITYgBYYAE1KTK\",\"type\":\"step-start\"}}\r\n{\"type\":\"text\",\"timestamp\":1790144761540,\"sessionID\":\"ses_f330ebdacffedITYgBYYAE1KTK\",\"part\":{\"id\":\"prt_0ccf14eb60010uN3ATz6dCtwgm\",\"messageID\":\"msg_0ccf14e91001lGvNWU81sivcHd\",\"sessionID\":\"ses_f330ebdacffedITYgBYYAE1KTK\",\"type\":\"text\",\"text\":\"HK-DONE\",\"time\":{\"start\":1790144761526,\"end\":1790144761528}}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790144761540,\"sessionID\":\"ses_f330ebdacffedITYgBYYAE1KTK\",\"part\":{\"id\":\"prt_0ccf14ebb001W9e0EYz61j6Ft3\",\"reason\":\"stop\",\"messageID\":\"msg_0ccf14e91001lGvNWU81sivcHd\",\"sessionID\":\"ses_f330ebdacffedITYgBYYAE1KTK\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+   "stderr_tail": ""
+  },
+  "deny_default": {
+   "sid": "deny_default",
+   "root": "C:\\hookconf-runs\\hookconf-opencode-v1-deny_default-7l_r79ok",
+   "argv": [
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "hookconf/mock",
+    "HKSCRIPT:main",
+    "run",
+    "the",
+    "scripted",
+    "steps"
+   ],
+   "mode": "default",
+   "exit": 0,
+   "duration_s": 2.95,
+   "timed_out": false,
+   "model_requests": 3,
+   "probe_events": 4,
+   "egress_refused": [
+    "CONNECT registry.npmjs.org:443"
+   ],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "stdout_tail": "part\":{\"id\":\"prt_0ccf15bca001xHhJ3Fn2PCgP4H\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0ccf15b49001iNmhM2p1xZhFxq\",\"sessionID\":\"ses_f330eaa00ffeP9aaPpFnqK8NHZ\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n{\"type\":\"step_start\",\"timestamp\":1790144764919,\"sessionID\":\"ses_f330eaa00ffeP9aaPpFnqK8NHZ\",\"part\":{\"id\":\"prt_0ccf15be8001tb5anfMexXMvnf\",\"messageID\":\"msg_0ccf15bcf001MpIC0AEa0fXGm0\",\"sessionID\":\"ses_f330eaa00ffeP9aaPpFnqK8NHZ\",\"type\":\"step-start\"}}\r\n{\"type\":\"text\",\"timestamp\":1790144764919,\"sessionID\":\"ses_f330eaa00ffeP9aaPpFnqK8NHZ\",\"part\":{\"id\":\"prt_0ccf15bea001yOI3m7h1P2zPRu\",\"messageID\":\"msg_0ccf15bcf001MpIC0AEa0fXGm0\",\"sessionID\":\"ses_f330eaa00ffeP9aaPpFnqK8NHZ\",\"type\":\"text\",\"text\":\"HK-DONE\",\"time\":{\"start\":1790144764906,\"end\":1790144764908}}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790144764919,\"sessionID\":\"ses_f330eaa00ffeP9aaPpFnqK8NHZ\",\"part\":{\"id\":\"prt_0ccf15bee001PfF24qznRMIbU1\",\"reason\":\"stop\",\"messageID\":\"msg_0ccf15bcf001MpIC0AEa0fXGm0\",\"sessionID\":\"ses_f330eaa00ffeP9aaPpFnqK8NHZ\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+   "stderr_tail": ""
+  },
+  "control_bypass": {
+   "sid": "control_bypass",
+   "root": "C:\\hookconf-runs\\hookconf-opencode-v1-control_bypass-nuqzr5e0",
+   "argv": [
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "hookconf/mock",
+    "--auto",
+    "HKSCRIPT:main",
+    "run",
+    "the",
+    "scripted",
+    "steps"
+   ],
+   "mode": "bypass",
+   "exit": 0,
+   "duration_s": 4.82,
+   "timed_out": false,
+   "model_requests": 3,
+   "probe_events": 6,
+   "egress_refused": [
+    "CONNECT registry.npmjs.org:443"
+   ],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "stdout_tail": "part\":{\"id\":\"prt_0ccf1708a001B61zAArGvTJYfG\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0ccf16fc6001Wgpo83vpjoZyuY\",\"sessionID\":\"ses_f330e9cb6ffeAfbJX8K12BaOTj\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n{\"type\":\"step_start\",\"timestamp\":1790144770234,\"sessionID\":\"ses_f330e9cb6ffeAfbJX8K12BaOTj\",\"part\":{\"id\":\"prt_0ccf170a9001zCITa3Ex0TTggB\",\"messageID\":\"msg_0ccf17090001QLQRLpdL39kILN\",\"sessionID\":\"ses_f330e9cb6ffeAfbJX8K12BaOTj\",\"type\":\"step-start\"}}\r\n{\"type\":\"text\",\"timestamp\":1790144770234,\"sessionID\":\"ses_f330e9cb6ffeAfbJX8K12BaOTj\",\"part\":{\"id\":\"prt_0ccf170ab001yjpC76D3DAkHZp\",\"messageID\":\"msg_0ccf17090001QLQRLpdL39kILN\",\"sessionID\":\"ses_f330e9cb6ffeAfbJX8K12BaOTj\",\"type\":\"text\",\"text\":\"HK-DONE\",\"time\":{\"start\":1790144770219,\"end\":1790144770222}}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790144770234,\"sessionID\":\"ses_f330e9cb6ffeAfbJX8K12BaOTj\",\"part\":{\"id\":\"prt_0ccf170b0001lMeYtCwI2kw12v\",\"reason\":\"stop\",\"messageID\":\"msg_0ccf17090001QLQRLpdL39kILN\",\"sessionID\":\"ses_f330e9cb6ffeAfbJX8K12BaOTj\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+   "stderr_tail": ""
+  },
+  "deny_bypass": {
+   "sid": "deny_bypass",
+   "root": "C:\\hookconf-runs\\hookconf-opencode-v1-deny_bypass-gt5g5sdq",
+   "argv": [
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "hookconf/mock",
+    "--auto",
+    "HKSCRIPT:main",
+    "run",
+    "the",
+    "scripted",
+    "steps"
+   ],
+   "mode": "bypass",
+   "exit": 0,
+   "duration_s": 2.95,
+   "timed_out": false,
+   "model_requests": 3,
+   "probe_events": 4,
+   "egress_refused": [
+    "CONNECT registry.npmjs.org:443"
+   ],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "stdout_tail": "part\":{\"id\":\"prt_0ccf17dbe001Ss6uzxUhxWGEYA\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0ccf17d460013Blh4DwkxOSOmu\",\"sessionID\":\"ses_f330e87e6ffekNtVS0ubsw1zE7\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n{\"type\":\"step_start\",\"timestamp\":1790144773619,\"sessionID\":\"ses_f330e87e6ffekNtVS0ubsw1zE7\",\"part\":{\"id\":\"prt_0ccf17de3001UL5EBfYDGAyArf\",\"messageID\":\"msg_0ccf17dc5001RVDGjbALN3x52b\",\"sessionID\":\"ses_f330e87e6ffekNtVS0ubsw1zE7\",\"type\":\"step-start\"}}\r\n{\"type\":\"text\",\"timestamp\":1790144773619,\"sessionID\":\"ses_f330e87e6ffekNtVS0ubsw1zE7\",\"part\":{\"id\":\"prt_0ccf17de5001avHwtvAPWayCA6\",\"messageID\":\"msg_0ccf17dc5001RVDGjbALN3x52b\",\"sessionID\":\"ses_f330e87e6ffekNtVS0ubsw1zE7\",\"type\":\"text\",\"text\":\"HK-DONE\",\"time\":{\"start\":1790144773605,\"end\":1790144773607}}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790144773619,\"sessionID\":\"ses_f330e87e6ffekNtVS0ubsw1zE7\",\"part\":{\"id\":\"prt_0ccf17de9001PyBMm3BykNGLYH\",\"reason\":\"stop\",\"messageID\":\"msg_0ccf17dc5001RVDGjbALN3x52b\",\"sessionID\":\"ses_f330e87e6ffekNtVS0ubsw1zE7\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+   "stderr_tail": ""
+  },
+  "exit2_default": {
+   "sid": "exit2_default",
+   "root": "C:\\hookconf-runs\\hookconf-opencode-v1-exit2_default-v3p3vypp",
+   "argv": [
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "hookconf/mock",
+    "HKSCRIPT:main",
+    "run",
+    "the",
+    "scripted",
+    "steps"
+   ],
+   "mode": "default",
+   "exit": 0,
+   "duration_s": 2.78,
+   "timed_out": false,
+   "model_requests": 3,
+   "probe_events": 4,
+   "egress_refused": [
+    "CONNECT registry.npmjs.org:443"
+   ],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "stdout_tail": "part\":{\"id\":\"prt_0ccf18a3c001hdQGBT9UfbRkEh\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0ccf189c7001MOkWnKkaxDX2GL\",\"sessionID\":\"ses_f330e7b0effeS4SkVlgdO1BxSm\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n{\"type\":\"step_start\",\"timestamp\":1790144776823,\"sessionID\":\"ses_f330e7b0effeS4SkVlgdO1BxSm\",\"part\":{\"id\":\"prt_0ccf18a68001gjv5z9en4Btuqp\",\"messageID\":\"msg_0ccf18a43001qa3cfS6pg1dnvh\",\"sessionID\":\"ses_f330e7b0effeS4SkVlgdO1BxSm\",\"type\":\"step-start\"}}\r\n{\"type\":\"text\",\"timestamp\":1790144776823,\"sessionID\":\"ses_f330e7b0effeS4SkVlgdO1BxSm\",\"part\":{\"id\":\"prt_0ccf18a6a0015ojQbvLiJ63PRZ\",\"messageID\":\"msg_0ccf18a43001qa3cfS6pg1dnvh\",\"sessionID\":\"ses_f330e7b0effeS4SkVlgdO1BxSm\",\"type\":\"text\",\"text\":\"HK-DONE\",\"time\":{\"start\":1790144776810,\"end\":1790144776813}}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790144776823,\"sessionID\":\"ses_f330e7b0effeS4SkVlgdO1BxSm\",\"part\":{\"id\":\"prt_0ccf18a6f0018CDt2JiXtLS528\",\"reason\":\"stop\",\"messageID\":\"msg_0ccf18a43001qa3cfS6pg1dnvh\",\"sessionID\":\"ses_f330e7b0effeS4SkVlgdO1BxSm\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+   "stderr_tail": ""
+  },
+  "fail_crash": {
+   "sid": "fail_crash",
+   "root": "C:\\hookconf-runs\\hookconf-opencode-v1-fail_crash-gys4v233",
+   "argv": [
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "hookconf/mock",
+    "HKSCRIPT:main",
+    "run",
+    "the",
+    "scripted",
+    "steps"
+   ],
+   "mode": "default",
+   "exit": 0,
+   "duration_s": 2.88,
+   "timed_out": false,
+   "model_requests": 2,
+   "probe_events": 3,
+   "egress_refused": [
+    "CONNECT registry.npmjs.org:443"
+   ],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "stdout_tail": "part\":{\"id\":\"prt_0ccf196be001xT2Imi4AtllTQA\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0ccf193c2001NrivNOztPDIqru\",\"sessionID\":\"ses_f330e6e40ffeik3OOKjxotQxOh\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n{\"type\":\"step_start\",\"timestamp\":1790144780084,\"sessionID\":\"ses_f330e6e40ffeik3OOKjxotQxOh\",\"part\":{\"id\":\"prt_0ccf19718001m9r5XKhPFpYSXq\",\"messageID\":\"msg_0ccf196d0001Qh06UxzLOrqNyu\",\"sessionID\":\"ses_f330e6e40ffeik3OOKjxotQxOh\",\"type\":\"step-start\"}}\r\n{\"type\":\"text\",\"timestamp\":1790144780084,\"sessionID\":\"ses_f330e6e40ffeik3OOKjxotQxOh\",\"part\":{\"id\":\"prt_0ccf1971b001skgVfgGTRw0XQk\",\"messageID\":\"msg_0ccf196d0001Qh06UxzLOrqNyu\",\"sessionID\":\"ses_f330e6e40ffeik3OOKjxotQxOh\",\"type\":\"text\",\"text\":\"HK-DONE\",\"time\":{\"start\":1790144780059,\"end\":1790144780064}}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790144780084,\"sessionID\":\"ses_f330e6e40ffeik3OOKjxotQxOh\",\"part\":{\"id\":\"prt_0ccf197230012dj0Q5VHQ9wlvh\",\"reason\":\"stop\",\"messageID\":\"msg_0ccf196d0001Qh06UxzLOrqNyu\",\"sessionID\":\"ses_f330e6e40ffeik3OOKjxotQxOh\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+   "stderr_tail": ""
+  },
+  "fail_hang": {
+   "sid": "fail_hang",
+   "root": "C:\\hookconf-runs\\hookconf-opencode-v1-fail_hang-ugciobaj",
+   "argv": [
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "hookconf/mock",
+    "HKSCRIPT:main",
+    "run",
+    "the",
+    "scripted",
+    "steps"
+   ],
+   "mode": "default",
+   "exit": 0,
+   "duration_s": 30.0,
+   "timed_out": false,
+   "model_requests": 2,
+   "probe_events": 5,
+   "egress_refused": [
+    "CONNECT registry.npmjs.org:443"
+   ],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "stdout_tail": "part\":{\"id\":\"prt_0ccf20dc4001q9FGO3q3NyZB4p\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0ccf1a12d001nbjQTv250EjPqp\",\"sessionID\":\"ses_f330e60d0ffe0bicMrUoegKvk7\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n{\"type\":\"step_start\",\"timestamp\":1790144810510,\"sessionID\":\"ses_f330e60d0ffe0bicMrUoegKvk7\",\"part\":{\"id\":\"prt_0ccf20dfc001T6k10zSEgMDfL1\",\"messageID\":\"msg_0ccf20dce001xHq4OXPD5RuxLM\",\"sessionID\":\"ses_f330e60d0ffe0bicMrUoegKvk7\",\"type\":\"step-start\"}}\r\n{\"type\":\"text\",\"timestamp\":1790144810510,\"sessionID\":\"ses_f330e60d0ffe0bicMrUoegKvk7\",\"part\":{\"id\":\"prt_0ccf20dfe001OXk6huQOcTOKjM\",\"messageID\":\"msg_0ccf20dce001xHq4OXPD5RuxLM\",\"sessionID\":\"ses_f330e60d0ffe0bicMrUoegKvk7\",\"type\":\"text\",\"text\":\"HK-DONE\",\"time\":{\"start\":1790144810494,\"end\":1790144810497}}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790144810510,\"sessionID\":\"ses_f330e60d0ffe0bicMrUoegKvk7\",\"part\":{\"id\":\"prt_0ccf20e03001cpbfpwxC3YouG9\",\"reason\":\"stop\",\"messageID\":\"msg_0ccf20dce001xHq4OXPD5RuxLM\",\"sessionID\":\"ses_f330e60d0ffe0bicMrUoegKvk7\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+   "stderr_tail": ""
+  },
+  "a5_tamper_default": {
+   "sid": "a5_tamper_default",
+   "root": "C:\\hookconf-runs\\hookconf-opencode-v1-a5_tamper_default-o3cqvdhs",
+   "argv": [
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "hookconf/mock",
+    "HKSCRIPT:main",
+    "run",
+    "the",
+    "scripted",
+    "steps"
+   ],
+   "mode": "default",
+   "exit": 0,
+   "duration_s": 4.32,
+   "timed_out": false,
+   "model_requests": 4,
+   "probe_events": 8,
+   "egress_refused": [
+    "CONNECT registry.npmjs.org:443"
+   ],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "stdout_tail": "part\":{\"id\":\"prt_0ccf22061001UogMXLBL0BGp3w\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0ccf21b88001w9fIE9aNy0B07R\",\"sessionID\":\"ses_f330deab2ffeEhmYl4UOwvmBAj\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n{\"type\":\"step_start\",\"timestamp\":1790144815242,\"sessionID\":\"ses_f330deab2ffeEhmYl4UOwvmBAj\",\"part\":{\"id\":\"prt_0ccf22079001LXCmkJhdIiNBwN\",\"messageID\":\"msg_0ccf22067001JzSnHjwemHd583\",\"sessionID\":\"ses_f330deab2ffeEhmYl4UOwvmBAj\",\"type\":\"step-start\"}}\r\n{\"type\":\"text\",\"timestamp\":1790144815242,\"sessionID\":\"ses_f330deab2ffeEhmYl4UOwvmBAj\",\"part\":{\"id\":\"prt_0ccf2207b001Ai0noyAQddDbp6\",\"messageID\":\"msg_0ccf22067001JzSnHjwemHd583\",\"sessionID\":\"ses_f330deab2ffeEhmYl4UOwvmBAj\",\"type\":\"text\",\"text\":\"HK-DONE\",\"time\":{\"start\":1790144815227,\"end\":1790144815230}}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790144815242,\"sessionID\":\"ses_f330deab2ffeEhmYl4UOwvmBAj\",\"part\":{\"id\":\"prt_0ccf22081001z0urWAOWngA0GR\",\"reason\":\"stop\",\"messageID\":\"msg_0ccf22067001JzSnHjwemHd583\",\"sessionID\":\"ses_f330deab2ffeEhmYl4UOwvmBAj\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+   "stderr_tail": ""
+  },
+  "a5_tamper_bypass": {
+   "sid": "a5_tamper_bypass",
+   "root": "C:\\hookconf-runs\\hookconf-opencode-v1-a5_tamper_bypass-46f2jhgy",
+   "argv": [
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "hookconf/mock",
+    "--auto",
+    "HKSCRIPT:main",
+    "run",
+    "the",
+    "scripted",
+    "steps"
+   ],
+   "mode": "bypass",
+   "exit": 0,
+   "duration_s": 4.3,
+   "timed_out": false,
+   "model_requests": 4,
+   "probe_events": 8,
+   "egress_refused": [
+    "CONNECT registry.npmjs.org:443"
+   ],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "stdout_tail": "part\":{\"id\":\"prt_0ccf232ce001mdSAXYL66TFCzM\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0ccf22dec001ZjNEhWzXf8alb9\",\"sessionID\":\"ses_f330dd833ffexRQu7wki956JJQ\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n{\"type\":\"step_start\",\"timestamp\":1790144819973,\"sessionID\":\"ses_f330dd833ffexRQu7wki956JJQ\",\"part\":{\"id\":\"prt_0ccf232f5001tSL9zNSxuXivw4\",\"messageID\":\"msg_0ccf232d5001Lyvp3Nm1tifAD3\",\"sessionID\":\"ses_f330dd833ffexRQu7wki956JJQ\",\"type\":\"step-start\"}}\r\n{\"type\":\"text\",\"timestamp\":1790144819973,\"sessionID\":\"ses_f330dd833ffexRQu7wki956JJQ\",\"part\":{\"id\":\"prt_0ccf232f7001NnZzUzVOHtRWWn\",\"messageID\":\"msg_0ccf232d5001Lyvp3Nm1tifAD3\",\"sessionID\":\"ses_f330dd833ffexRQu7wki956JJQ\",\"type\":\"text\",\"text\":\"HK-DONE\",\"time\":{\"start\":1790144819959,\"end\":1790144819962}}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790144819973,\"sessionID\":\"ses_f330dd833ffexRQu7wki956JJQ\",\"part\":{\"id\":\"prt_0ccf232fc0019msBqiSDHXLUPe\",\"reason\":\"stop\",\"messageID\":\"msg_0ccf232d5001Lyvp3Nm1tifAD3\",\"sessionID\":\"ses_f330dd833ffexRQu7wki956JJQ\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+   "stderr_tail": ""
+  },
+  "a6_midsession": {
+   "sid": "a6_midsession",
+   "root": "C:\\hookconf-runs\\hookconf-opencode-v1-a6_midsession-tye_ord0",
+   "argv": [
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "hookconf/mock",
+    "HKSCRIPT:main",
+    "run",
+    "the",
+    "scripted",
+    "steps"
+   ],
+   "mode": "default",
+   "exit": 0,
+   "duration_s": 7.64,
+   "timed_out": false,
+   "model_requests": 3,
+   "probe_events": 5,
+   "egress_refused": [
+    "CONNECT registry.npmjs.org:443"
+   ],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "stdout_tail": "part\":{\"id\":\"prt_0ccf2524d001ecn6tPpiqKKiS3\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0ccf2460d001St67LnJf4cJMFb\",\"sessionID\":\"ses_f330dc58dffehaoUvLJnk8U8Ez\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n{\"type\":\"step_start\",\"timestamp\":1790144828042,\"sessionID\":\"ses_f330dc58dffehaoUvLJnk8U8Ez\",\"part\":{\"id\":\"prt_0ccf25277001hxcaM1q0iqMdyh\",\"messageID\":\"msg_0ccf25254001ca8GCmSjqH5tIN\",\"sessionID\":\"ses_f330dc58dffehaoUvLJnk8U8Ez\",\"type\":\"step-start\"}}\r\n{\"type\":\"text\",\"timestamp\":1790144828042,\"sessionID\":\"ses_f330dc58dffehaoUvLJnk8U8Ez\",\"part\":{\"id\":\"prt_0ccf25279001etAaNjX7k5lVv3\",\"messageID\":\"msg_0ccf25254001ca8GCmSjqH5tIN\",\"sessionID\":\"ses_f330dc58dffehaoUvLJnk8U8Ez\",\"type\":\"text\",\"text\":\"HK-DONE\",\"time\":{\"start\":1790144828025,\"end\":1790144828028}}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790144828042,\"sessionID\":\"ses_f330dc58dffehaoUvLJnk8U8Ez\",\"part\":{\"id\":\"prt_0ccf2527f001qKIhyzboVmSE3A\",\"reason\":\"stop\",\"messageID\":\"msg_0ccf25254001ca8GCmSjqH5tIN\",\"sessionID\":\"ses_f330dc58dffehaoUvLJnk8U8Ez\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+   "stderr_tail": ""
+  },
+  "p1_control": {
+   "sid": "p1_control",
+   "root": "C:\\hookconf-runs\\hookconf-opencode-v1-p1_control-623g67rk",
+   "argv": [
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "hookconf/mock",
+    "HKSCRIPT:main",
+    "run",
+    "the",
+    "scripted",
+    "steps"
+   ],
+   "mode": "strict",
+   "exit": 0,
+   "duration_s": 2.71,
+   "timed_out": false,
+   "model_requests": 1,
+   "probe_events": 3,
+   "egress_refused": [
+    "CONNECT registry.npmjs.org:443"
+   ],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "stdout_tail": "_start\",\"timestamp\":1790144831120,\"sessionID\":\"ses_f330da64effengN4wCoivtlrGn\",\"part\":{\"id\":\"prt_0ccf25e2c001Mbr4q00DD5ud29\",\"messageID\":\"msg_0ccf25b9e001xRysnbn4JTC07w\",\"sessionID\":\"ses_f330da64effengN4wCoivtlrGn\",\"type\":\"step-start\"}}\r\n{\"type\":\"tool_use\",\"timestamp\":1790144831179,\"sessionID\":\"ses_f330da64effengN4wCoivtlrGn\",\"part\":{\"type\":\"tool\",\"tool\":\"bash\",\"callID\":\"toolu_hk3_3d316f_0\",\"state\":{\"status\":\"error\",\"input\":{\"command\":\"echo HK-P1 > C:/hookconf-runs/hookconf-opencode-v1-p1_control-623g67rk/project/marker_p1_control.txt\",\"description\":\"hookconf canary\"},\"error\":\"The user rejected permission to use this specific tool call.\",\"time\":{\"start\":1790144831037,\"end\":1790144831155}},\"id\":\"prt_0ccf25e30001dyLMzYa9YzBT7c\",\"sessionID\":\"ses_f330da64effengN4wCoivtlrGn\",\"messageID\":\"msg_0ccf25b9e001xRysnbn4JTC07w\"}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790144831179,\"sessionID\":\"ses_f330da64effengN4wCoivtlrGn\",\"part\":{\"id\":\"prt_0ccf25eb6001mcL6evJRxldeM4\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0ccf25b9e001xRysnbn4JTC07w\",\"sessionID\":\"ses_f330da64effengN4wCoivtlrGn\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+   "stderr_tail": "\u001b[93m\u001b[1m! \u001b[0mpermission requested: bash (echo HK-P1 > C:/hookconf-runs/hookconf-opencode-v1-p1_control-623g67rk/project/marker_p1_control.txt); auto-rejecting\r\n"
+  },
+  "p1_allow": {
+   "sid": "p1_allow",
+   "root": "C:\\hookconf-runs\\hookconf-opencode-v1-p1_allow-_w_ksrh4",
+   "argv": [
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "hookconf/mock",
+    "HKSCRIPT:main",
+    "run",
+    "the",
+    "scripted",
+    "steps"
+   ],
+   "mode": "strict",
+   "exit": 0,
+   "duration_s": 2.73,
+   "timed_out": false,
+   "model_requests": 1,
+   "probe_events": 3,
+   "egress_refused": [
+    "CONNECT registry.npmjs.org:443"
+   ],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "stdout_tail": "step_start\",\"timestamp\":1790144834624,\"sessionID\":\"ses_f330d9892ffegJy9MKqxYHQwGj\",\"part\":{\"id\":\"prt_0ccf26bd70016lZ5V7LeF37Th4\",\"messageID\":\"msg_0ccf26959001XWxQySMkllHDz7\",\"sessionID\":\"ses_f330d9892ffegJy9MKqxYHQwGj\",\"type\":\"step-start\"}}\r\n{\"type\":\"tool_use\",\"timestamp\":1790144834689,\"sessionID\":\"ses_f330d9892ffegJy9MKqxYHQwGj\",\"part\":{\"type\":\"tool\",\"tool\":\"bash\",\"callID\":\"toolu_hk3_0d1a5a_0\",\"state\":{\"status\":\"error\",\"input\":{\"command\":\"echo HK-P1 > C:/hookconf-runs/hookconf-opencode-v1-p1_allow-_w_ksrh4/project/marker_p1_allow.txt\",\"description\":\"hookconf canary\"},\"error\":\"The user rejected permission to use this specific tool call.\",\"time\":{\"start\":1790144834535,\"end\":1790144834659}},\"id\":\"prt_0ccf26bda001zucb0Md09xWgaF\",\"sessionID\":\"ses_f330d9892ffegJy9MKqxYHQwGj\",\"messageID\":\"msg_0ccf26959001XWxQySMkllHDz7\"}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790144834690,\"sessionID\":\"ses_f330d9892ffegJy9MKqxYHQwGj\",\"part\":{\"id\":\"prt_0ccf26c68001RZIK3OoeqtDJns\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0ccf26959001XWxQySMkllHDz7\",\"sessionID\":\"ses_f330d9892ffegJy9MKqxYHQwGj\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+   "stderr_tail": "\u001b[93m\u001b[1m! \u001b[0mpermission requested: bash (echo HK-P1 > C:/hookconf-runs/hookconf-opencode-v1-p1_allow-_w_ksrh4/project/marker_p1_allow.txt); auto-rejecting\r\n"
+  },
+  "m1_replace": {
+   "sid": "m1_replace",
+   "root": "C:\\hookconf-runs\\hookconf-opencode-v1-m1_replace-tfa0m1zc",
+   "argv": [
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+    "run",
+    "--format",
+    "json",
+    "--model",
+    "hookconf/mock",
+    "HKSCRIPT:main",
+    "run",
+    "the",
+    "scripted",
+    "steps"
+   ],
+   "mode": "default",
+   "exit": 0,
+   "duration_s": 4.44,
+   "timed_out": false,
+   "model_requests": 2,
+   "probe_events": 4,
+   "egress_refused": [
+    "CONNECT registry.npmjs.org:443"
+   ],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "stdout_tail": "part\":{\"id\":\"prt_0ccf280ac001QqYcUHofdyohUq\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0ccf2773e001px3D06FpaOHjGd\",\"sessionID\":\"ses_f330d8adbffey4oX6tm8BhLwHN\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n{\"type\":\"step_start\",\"timestamp\":1790144839912,\"sessionID\":\"ses_f330d8adbffey4oX6tm8BhLwHN\",\"part\":{\"id\":\"prt_0ccf280d9001tXO3HbdX2C4zxz\",\"messageID\":\"msg_0ccf280b5001VV77Nt0fgbIA1Z\",\"sessionID\":\"ses_f330d8adbffey4oX6tm8BhLwHN\",\"type\":\"step-start\"}}\r\n{\"type\":\"text\",\"timestamp\":1790144839912,\"sessionID\":\"ses_f330d8adbffey4oX6tm8BhLwHN\",\"part\":{\"id\":\"prt_0ccf280db001xH6u6Cy09CEZcv\",\"messageID\":\"msg_0ccf280b5001VV77Nt0fgbIA1Z\",\"sessionID\":\"ses_f330d8adbffey4oX6tm8BhLwHN\",\"type\":\"text\",\"text\":\"HK-DONE\",\"time\":{\"start\":1790144839899,\"end\":1790144839901}}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790144839913,\"sessionID\":\"ses_f330d8adbffey4oX6tm8BhLwHN\",\"part\":{\"id\":\"prt_0ccf280e0001xdhO7gVlgrOOtu\",\"reason\":\"stop\",\"messageID\":\"msg_0ccf280b5001VV77Nt0fgbIA1Z\",\"sessionID\":\"ses_f330d8adbffey4oX6tm8BhLwHN\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+   "stderr_tail": ""
+  }
+ },
+ "session_errors": {},
+ "updates": [
+  {
+   "only": [
+    "A2b"
+   ],
+   "kit": {
+    "name": "hookconf",
+    "version": "0.1.0",
+    "git_sha": "ba26c03"
+   },
+   "date": "2026-09-23T18:28:45+00:00",
+   "platform": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.10"
+   },
+   "binary": "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+   "sessions": {
+    "preflight": {
+     "sid": "preflight",
+     "root": "C:\\hookconf-runs\\hookconf-opencode-v1-preflight-nt6b13ga",
+     "argv": [
+      "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\opencode\\node_modules\\opencode-windows-x64\\bin\\opencode.exe",
+      "run",
+      "--format",
+      "json",
+      "--model",
+      "hookconf/mock",
+      "HKSCRIPT:main",
+      "run",
+      "the",
+      "scripted",
+      "steps"
+     ],
+     "mode": "default",
+     "exit": 0,
+     "duration_s": 29.05,
+     "timed_out": false,
+     "model_requests": 2,
+     "probe_events": 4,
+     "egress_refused": [
+      "CONNECT registry.npmjs.org:443",
+      "CONNECT github.com:443"
+     ],
+     "isolation_diff": {},
+     "unknown_requests": [],
+     "stdout_tail": "part\":{\"id\":\"prt_0cf86fbb000185yJ5jJtPAl6K3\",\"reason\":\"tool-calls\",\"messageID\":\"msg_0cf86a47c001atnuAGXPELzfkR\",\"sessionID\":\"ses_f30796b27ffexJv7fxJTZnNZY3\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n{\"type\":\"step_start\",\"timestamp\":1790188125186,\"sessionID\":\"ses_f30796b27ffexJv7fxJTZnNZY3\",\"part\":{\"id\":\"prt_0cf86fbea001nySbkhcZ9y1wz2\",\"messageID\":\"msg_0cf86fbba0014WuJhQvVEvyPC9\",\"sessionID\":\"ses_f30796b27ffexJv7fxJTZnNZY3\",\"type\":\"step-start\"}}\r\n{\"type\":\"text\",\"timestamp\":1790188125186,\"sessionID\":\"ses_f30796b27ffexJv7fxJTZnNZY3\",\"part\":{\"id\":\"prt_0cf86fbed001XgoU5u2BlB3uhA\",\"messageID\":\"msg_0cf86fbba0014WuJhQvVEvyPC9\",\"sessionID\":\"ses_f30796b27ffexJv7fxJTZnNZY3\",\"type\":\"text\",\"text\":\"HK-DONE\",\"time\":{\"start\":1790188125165,\"end\":1790188125168}}}\r\n{\"type\":\"step_finish\",\"timestamp\":1790188125186,\"sessionID\":\"ses_f30796b27ffexJv7fxJTZnNZY3\",\"part\":{\"id\":\"prt_0cf86fbf4001cFN53DIFLHk6KY\",\"reason\":\"stop\",\"messageID\":\"msg_0cf86fbba0014WuJhQvVEvyPC9\",\"sessionID\":\"ses_f30796b27ffexJv7fxJTZnNZY3\",\"type\":\"step-finish\",\"tokens\":{\"total\":15,\"input\":10,\"output\":5,\"reasoning\":0,\"cache\":{\"write\":0,\"read\":0}},\"cost\":0}}\r\n",
+     "stderr_tail": ""
+    }
+   },
+   "session_errors": {}
+  }
+ ]
+}

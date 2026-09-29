@@ -1,0 +1,797 @@
+{
+ "kit": {
+  "name": "hookconf",
+  "version": "0.1.0",
+  "git_sha": "fda14b6-dirty"
+ },
+ "harness": {
+  "name": "pi",
+  "version": "0.86.0",
+  "binary": "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\pi\\node_modules\\@earendil-works\\pi-coding-agent\\dist\\bundle\\cli.js"
+ },
+ "platform": {
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.7"
+ },
+ "date": "2026-09-24T08:30:51+00:00",
+ "only": [
+  "A1",
+  "P3",
+  "P4"
+ ],
+ "results": [
+  {
+   "id": "A1",
+   "status": "pass",
+   "summary": "Pi extension ask displayed an interactive Yes/No dialog under its normal tool mode; Yes allowed the canary",
+   "evidence": {
+    "prompt_matched": true,
+    "yes_no_visible": true,
+    "dialog_excerpt": "HK-INTERACTIVE-ASK\n\n\n\n → Yes\n\n   No\n\n\n\n ↑↓ navigate  enter select  escape/ctrl+c cancel\n\n\n\n────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n\nC:\\hookconf-runs\\hookconf-pi-pi_inter",
+    "remember_choice_visible": false,
+    "confirm_results": [
+     true
+    ],
+    "has_ui": [
+     true
+    ],
+    "marker_exists": true,
+    "terminal": {
+     "backend": "windows-conpty",
+     "matched": [
+      "(hookconf) mock",
+      "HK-INTERACTIVE-ASK",
+      "HK-INTERACTIVE-DONE"
+     ],
+     "pending": []
+    },
+    "probe": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     },
+     {
+      "event": "UserPromptSubmit",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "has_ui",
+       "hook_event_name",
+       "mode",
+       "native_event",
+       "prompt",
+       "session_file",
+       "session_id",
+       "transcript_path"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-pi-pi_interactive_yes-08fm22ks\\tmp\\hookconf-transcript-prompt.json",
+        "exists": true,
+        "size": 267,
+        "needles": {}
+       }
+      }
+     },
+     {
+      "event": "PreToolUse",
+      "action": "ask",
+      "exit": 0,
+      "tool_name": "bash",
+      "tool_use_id": "toolu_hk1_947332_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "prompt_entry_id",
+       "session_file",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "command": "echo HK-INTERACTIVE-CANARY > C:/hookconf-runs/hookconf-pi-pi_interactive_yes-08fm22ks/project/marker_pi_interactive_yes.txt"
+      },
+      "probe_stdout": "{\"action\": \"ask\", \"reason\": \"HK-INTERACTIVE-ASK\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-pi-pi_interactive_yes-08fm22ks\\tmp\\hookconf-transcript-toolu_hk1_947332_0.json",
+        "exists": true,
+        "size": 7149,
+        "needles": {}
+       }
+      }
+     },
+     {
+      "event": "AskOutcome",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": "toolu_hk1_947332_0",
+      "agent_id": null,
+      "keys": [
+       "confirm_result",
+       "has_ui",
+       "hook_event_name",
+       "tool_use_id"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     },
+     {
+      "event": "PostToolUse",
+      "action": "none",
+      "exit": 0,
+      "tool_name": "bash",
+      "tool_use_id": "toolu_hk1_947332_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "is_error",
+       "native_event",
+       "prompt_entry_id",
+       "session_file",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_response",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "command": "echo HK-INTERACTIVE-CANARY > C:/hookconf-runs/hookconf-pi-pi_interactive_yes-08fm22ks/project/marker_pi_interactive_yes.txt"
+      },
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-pi-pi_interactive_yes-08fm22ks\\tmp\\hookconf-transcript-toolu_hk1_947332_0-post.json",
+        "exists": true,
+        "size": 7149,
+        "needles": {}
+       }
+      }
+     }
+    ]
+   },
+   "sessions": [
+    "pi_interactive_yes"
+   ]
+  },
+  {
+   "id": "P3",
+   "status": "unsupported",
+   "summary": "Pi confirm dialog offers Yes/No, with no remembered-grant choice to scope or replay",
+   "evidence": {
+    "prompt_matched": true,
+    "yes_no_visible": true,
+    "dialog_excerpt": "HK-INTERACTIVE-ASK\n\n\n\n → Yes\n\n   No\n\n\n\n ↑↓ navigate  enter select  escape/ctrl+c cancel\n\n\n\n────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n\nC:\\hookconf-runs\\hookconf-pi-pi_inter",
+    "remember_choice_visible": false,
+    "confirm_results": [
+     true
+    ],
+    "has_ui": [
+     true
+    ],
+    "marker_exists": true,
+    "terminal": {
+     "backend": "windows-conpty",
+     "matched": [
+      "(hookconf) mock",
+      "HK-INTERACTIVE-ASK",
+      "HK-INTERACTIVE-DONE"
+     ],
+     "pending": []
+    },
+    "probe": [
+     {
+      "event": "PluginLoaded",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "hook_event_name",
+       "variant"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     },
+     {
+      "event": "UserPromptSubmit",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": null,
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "has_ui",
+       "hook_event_name",
+       "mode",
+       "native_event",
+       "prompt",
+       "session_file",
+       "session_id",
+       "transcript_path"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-pi-pi_interactive_yes-08fm22ks\\tmp\\hookconf-transcript-prompt.json",
+        "exists": true,
+        "size": 267,
+        "needles": {}
+       }
+      }
+     },
+     {
+      "event": "PreToolUse",
+      "action": "ask",
+      "exit": 0,
+      "tool_name": "bash",
+      "tool_use_id": "toolu_hk1_947332_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "native_event",
+       "prompt_entry_id",
+       "session_file",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "command": "echo HK-INTERACTIVE-CANARY > C:/hookconf-runs/hookconf-pi-pi_interactive_yes-08fm22ks/project/marker_pi_interactive_yes.txt"
+      },
+      "probe_stdout": "{\"action\": \"ask\", \"reason\": \"HK-INTERACTIVE-ASK\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-pi-pi_interactive_yes-08fm22ks\\tmp\\hookconf-transcript-toolu_hk1_947332_0.json",
+        "exists": true,
+        "size": 7149,
+        "needles": {}
+       }
+      }
+     },
+     {
+      "event": "AskOutcome",
+      "action": "none",
+      "exit": 0,
+      "tool_name": null,
+      "tool_use_id": "toolu_hk1_947332_0",
+      "agent_id": null,
+      "keys": [
+       "confirm_result",
+       "has_ui",
+       "hook_event_name",
+       "tool_use_id"
+      ],
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+     },
+     {
+      "event": "PostToolUse",
+      "action": "none",
+      "exit": 0,
+      "tool_name": "bash",
+      "tool_use_id": "toolu_hk1_947332_0",
+      "agent_id": null,
+      "keys": [
+       "cwd",
+       "hook_event_name",
+       "is_error",
+       "native_event",
+       "prompt_entry_id",
+       "session_file",
+       "session_id",
+       "tool_input",
+       "tool_name",
+       "tool_response",
+       "tool_use_id",
+       "transcript_path"
+      ],
+      "tool_input": {
+       "command": "echo HK-INTERACTIVE-CANARY > C:/hookconf-runs/hookconf-pi-pi_interactive_yes-08fm22ks/project/marker_pi_interactive_yes.txt"
+      },
+      "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+      "transcript": {
+       "transcript_path": {
+        "path": "C:\\hookconf-runs\\hookconf-pi-pi_interactive_yes-08fm22ks\\tmp\\hookconf-transcript-toolu_hk1_947332_0-post.json",
+        "exists": true,
+        "size": 7149,
+        "needles": {}
+       }
+      }
+     }
+    ]
+   },
+   "sessions": [
+    "pi_interactive_yes"
+   ]
+  },
+  {
+   "id": "P4",
+   "status": "unsupported",
+   "summary": "Pi confirm returned both user decisions to the extension, but exposes no separate approval/rejection hook event",
+   "evidence": {
+    "approve": {
+     "prompt_matched": true,
+     "yes_no_visible": true,
+     "dialog_excerpt": "HK-INTERACTIVE-ASK\n\n\n\n → Yes\n\n   No\n\n\n\n ↑↓ navigate  enter select  escape/ctrl+c cancel\n\n\n\n────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n\nC:\\hookconf-runs\\hookconf-pi-pi_inter",
+     "remember_choice_visible": false,
+     "confirm_results": [
+      true
+     ],
+     "has_ui": [
+      true
+     ],
+     "marker_exists": true,
+     "terminal": {
+      "backend": "windows-conpty",
+      "matched": [
+       "(hookconf) mock",
+       "HK-INTERACTIVE-ASK",
+       "HK-INTERACTIVE-DONE"
+      ],
+      "pending": []
+     },
+     "probe": [
+      {
+       "event": "PluginLoaded",
+       "action": "none",
+       "exit": 0,
+       "tool_name": null,
+       "tool_use_id": null,
+       "agent_id": null,
+       "keys": [
+        "hook_event_name",
+        "variant"
+       ],
+       "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+      },
+      {
+       "event": "UserPromptSubmit",
+       "action": "none",
+       "exit": 0,
+       "tool_name": null,
+       "tool_use_id": null,
+       "agent_id": null,
+       "keys": [
+        "cwd",
+        "has_ui",
+        "hook_event_name",
+        "mode",
+        "native_event",
+        "prompt",
+        "session_file",
+        "session_id",
+        "transcript_path"
+       ],
+       "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+       "transcript": {
+        "transcript_path": {
+         "path": "C:\\hookconf-runs\\hookconf-pi-pi_interactive_yes-08fm22ks\\tmp\\hookconf-transcript-prompt.json",
+         "exists": true,
+         "size": 267,
+         "needles": {}
+        }
+       }
+      },
+      {
+       "event": "PreToolUse",
+       "action": "ask",
+       "exit": 0,
+       "tool_name": "bash",
+       "tool_use_id": "toolu_hk1_947332_0",
+       "agent_id": null,
+       "keys": [
+        "cwd",
+        "hook_event_name",
+        "native_event",
+        "prompt_entry_id",
+        "session_file",
+        "session_id",
+        "tool_input",
+        "tool_name",
+        "tool_use_id",
+        "transcript_path"
+       ],
+       "tool_input": {
+        "command": "echo HK-INTERACTIVE-CANARY > C:/hookconf-runs/hookconf-pi-pi_interactive_yes-08fm22ks/project/marker_pi_interactive_yes.txt"
+       },
+       "probe_stdout": "{\"action\": \"ask\", \"reason\": \"HK-INTERACTIVE-ASK\", \"seconds\": 30.0}",
+       "transcript": {
+        "transcript_path": {
+         "path": "C:\\hookconf-runs\\hookconf-pi-pi_interactive_yes-08fm22ks\\tmp\\hookconf-transcript-toolu_hk1_947332_0.json",
+         "exists": true,
+         "size": 7149,
+         "needles": {}
+        }
+       }
+      },
+      {
+       "event": "AskOutcome",
+       "action": "none",
+       "exit": 0,
+       "tool_name": null,
+       "tool_use_id": "toolu_hk1_947332_0",
+       "agent_id": null,
+       "keys": [
+        "confirm_result",
+        "has_ui",
+        "hook_event_name",
+        "tool_use_id"
+       ],
+       "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+      },
+      {
+       "event": "PostToolUse",
+       "action": "none",
+       "exit": 0,
+       "tool_name": "bash",
+       "tool_use_id": "toolu_hk1_947332_0",
+       "agent_id": null,
+       "keys": [
+        "cwd",
+        "hook_event_name",
+        "is_error",
+        "native_event",
+        "prompt_entry_id",
+        "session_file",
+        "session_id",
+        "tool_input",
+        "tool_name",
+        "tool_response",
+        "tool_use_id",
+        "transcript_path"
+       ],
+       "tool_input": {
+        "command": "echo HK-INTERACTIVE-CANARY > C:/hookconf-runs/hookconf-pi-pi_interactive_yes-08fm22ks/project/marker_pi_interactive_yes.txt"
+       },
+       "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+       "transcript": {
+        "transcript_path": {
+         "path": "C:\\hookconf-runs\\hookconf-pi-pi_interactive_yes-08fm22ks\\tmp\\hookconf-transcript-toolu_hk1_947332_0-post.json",
+         "exists": true,
+         "size": 7149,
+         "needles": {}
+        }
+       }
+      }
+     ]
+    },
+    "reject": {
+     "prompt_matched": true,
+     "yes_no_visible": true,
+     "dialog_excerpt": "HK-INTERACTIVE-ASK\n\n\n\n → Yes\n\n   No\n\n\n\n ↑↓ navigate  enter select  escape/ctrl+c cancel\n\n\n\n────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\n\nC:\\hookconf-runs\\hookconf-pi-pi_inter",
+     "remember_choice_visible": false,
+     "confirm_results": [
+      false
+     ],
+     "has_ui": [
+      true
+     ],
+     "marker_exists": false,
+     "terminal": {
+      "backend": "windows-conpty",
+      "matched": [
+       "(hookconf) mock",
+       "HK-INTERACTIVE-ASK",
+       "HK-INTERACTIVE-DONE"
+      ],
+      "pending": []
+     },
+     "probe": [
+      {
+       "event": "PluginLoaded",
+       "action": "none",
+       "exit": 0,
+       "tool_name": null,
+       "tool_use_id": null,
+       "agent_id": null,
+       "keys": [
+        "hook_event_name",
+        "variant"
+       ],
+       "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+      },
+      {
+       "event": "UserPromptSubmit",
+       "action": "none",
+       "exit": 0,
+       "tool_name": null,
+       "tool_use_id": null,
+       "agent_id": null,
+       "keys": [
+        "cwd",
+        "has_ui",
+        "hook_event_name",
+        "mode",
+        "native_event",
+        "prompt",
+        "session_file",
+        "session_id",
+        "transcript_path"
+       ],
+       "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}",
+       "transcript": {
+        "transcript_path": {
+         "path": "C:\\hookconf-runs\\hookconf-pi-pi_interactive_no-q_u9qxs1\\tmp\\hookconf-transcript-prompt.json",
+         "exists": true,
+         "size": 267,
+         "needles": {}
+        }
+       }
+      },
+      {
+       "event": "PreToolUse",
+       "action": "ask",
+       "exit": 0,
+       "tool_name": "bash",
+       "tool_use_id": "toolu_hk1_eb11b3_0",
+       "agent_id": null,
+       "keys": [
+        "cwd",
+        "hook_event_name",
+        "native_event",
+        "prompt_entry_id",
+        "session_file",
+        "session_id",
+        "tool_input",
+        "tool_name",
+        "tool_use_id",
+        "transcript_path"
+       ],
+       "tool_input": {
+        "command": "echo HK-INTERACTIVE-CANARY > C:/hookconf-runs/hookconf-pi-pi_interactive_no-q_u9qxs1/project/marker_pi_interactive_no.txt"
+       },
+       "probe_stdout": "{\"action\": \"ask\", \"reason\": \"HK-INTERACTIVE-ASK\", \"seconds\": 30.0}",
+       "transcript": {
+        "transcript_path": {
+         "path": "C:\\hookconf-runs\\hookconf-pi-pi_interactive_no-q_u9qxs1\\tmp\\hookconf-transcript-toolu_hk1_eb11b3_0.json",
+         "exists": true,
+         "size": 7146,
+         "needles": {}
+        }
+       }
+      },
+      {
+       "event": "AskOutcome",
+       "action": "none",
+       "exit": 0,
+       "tool_name": null,
+       "tool_use_id": "toolu_hk1_eb11b3_0",
+       "agent_id": null,
+       "keys": [
+        "confirm_result",
+        "has_ui",
+        "hook_event_name",
+        "tool_use_id"
+       ],
+       "probe_stdout": "{\"action\": \"none\", \"reason\": \"HK-DENY-REASON\", \"seconds\": 30.0}"
+      }
+     ]
+    },
+    "native_decision_event": false
+   },
+   "sessions": [
+    "pi_interactive_yes",
+    "pi_interactive_no"
+   ]
+  }
+ ],
+ "levels": {
+  "core": "none",
+  "reached": "none",
+  "star": false,
+  "per_level": [
+   {
+    "level": "L0",
+    "name": "Observe",
+    "met": false,
+    "star": false,
+    "passed": [],
+    "blocking_status": {
+     "O1": "not_tested",
+     "O2": "not_tested",
+     "O3": "not_tested",
+     "O4": "not_tested"
+    },
+    "untested": [
+     "O1",
+     "O2",
+     "O3",
+     "O4"
+    ],
+    "not_applicable": []
+   },
+   {
+    "level": "L1",
+    "name": "Block",
+    "met": false,
+    "star": false,
+    "passed": [],
+    "blocking_status": {
+     "B1": "not_tested",
+     "B2": "not_tested",
+     "B3": "not_tested",
+     "B4": "not_tested"
+    },
+    "untested": [
+     "B1",
+     "B2",
+     "B3",
+     "B4"
+    ],
+    "not_applicable": []
+   },
+   {
+    "level": "L2",
+    "name": "Ask + context",
+    "met": false,
+    "star": false,
+    "passed": [
+     "A1"
+    ],
+    "blocking_status": {
+     "A2": "not_tested",
+     "A2b": "not_tested",
+     "A3": "not_tested",
+     "A4": "not_tested"
+    },
+    "untested": [
+     "A2",
+     "A2b",
+     "A3",
+     "A4"
+    ],
+    "not_applicable": []
+   },
+   {
+    "level": "L3",
+    "name": "Allow",
+    "met": false,
+    "star": false,
+    "passed": [],
+    "blocking_status": {
+     "P3": "unsupported",
+     "P1": "not_tested"
+    },
+    "untested": [
+     "P1",
+     "P2"
+    ],
+    "not_applicable": []
+   },
+   {
+    "level": "L4",
+    "name": "Content + multi-agent",
+    "met": false,
+    "star": false,
+    "passed": [],
+    "blocking_status": {
+     "M1": "not_tested",
+     "M3": "not_tested"
+    },
+    "untested": [
+     "M1",
+     "M3"
+    ],
+    "not_applicable": []
+   }
+  ],
+  "hardening": {
+   "B5": "not_tested",
+   "B6": "not_tested",
+   "A5": "not_tested",
+   "A6": "not_tested",
+   "P4": "unsupported",
+   "P5": "not_tested",
+   "M2": "not_tested",
+   "M4": "not_tested",
+   "M5": "not_tested"
+  },
+  "gaps": [
+   "P4"
+  ],
+  "gap_labels": [
+   "P4 no approve/reject event"
+  ],
+  "hardening_not_tested": [
+   "B5",
+   "B6",
+   "A5",
+   "A6",
+   "P5",
+   "M2",
+   "M4",
+   "M5"
+  ]
+ },
+ "sessions": {
+  "pi_interactive_yes": {
+   "sid": "pi_interactive_yes",
+   "root": "C:\\hookconf-runs\\hookconf-pi-pi_interactive_yes-08fm22ks",
+   "argv": [
+    "C:\\Program Files\\nodejs\\node.EXE",
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\pi\\node_modules\\@earendil-works\\pi-coding-agent\\dist\\bundle\\cli.js",
+    "--provider",
+    "hookconf",
+    "--model",
+    "mock"
+   ],
+   "mode": "default",
+   "exit": 1,
+   "duration_s": 1.79,
+   "timed_out": false,
+   "model_requests": 2,
+   "probe_events": 5,
+   "egress_refused": [],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "terminal": {
+    "backend": "windows-conpty",
+    "matched": [
+     "(hookconf) mock",
+     "HK-INTERACTIVE-ASK",
+     "HK-INTERACTIVE-DONE"
+    ],
+    "pending": []
+   },
+   "stdout_tail": "38;2;128;128;128m(no output)\u001b[K\u001b[39m\r\n\u001b[K\r\n \u001b[38;2;128;128;128mTook 0.6s\u001b[K\u001b[39m\r\n\u001b[K\u001b[m\r\n\u001b[K\u001b[38;2;80;80;80m\r\n── ⠸ Working ───────────────────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[7m\r\n \u001b[27m\u001b[K\u001b[38;2;80;80;80m\r\n────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\u001b[38;2;102;102;102m\r\nC:\\hookconf-runs\\hookconf-pi-pi_interactive_yes-08fm22ks\\project\u001b[K\r\n↑10 ↓5 0.0%/200k (auto)                                                                                  (hookconf) mock\u001b[m\u001b[?2026h\u001b[23;1H\u001b[K\u001b[120C\u001b]133;A\u0007\r\n\u001b[K\u001b[120C\u001b]133;B\u0007\u001b]133;C\u0007\u001b[?2026l\r HK-INTERACTIVE-DONE\u001b[K\r\n\u001b[K\u001b[38;2;80;80;80m\r\n────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[7m\r\n \u001b[27m\u001b[K\u001b[38;2;80;80;80m\r\n────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\u001b[38;2;102;102;102m\r\nC:\\hookconf-runs\\hookconf-pi-pi_interactive_yes-08fm22ks\\project\u001b[K\r\n↑20 ↓10 0.0%/200k (auto)                                                                                 (hookconf) mock",
+   "stderr_tail": ""
+  },
+  "pi_interactive_no": {
+   "sid": "pi_interactive_no",
+   "root": "C:\\hookconf-runs\\hookconf-pi-pi_interactive_no-q_u9qxs1",
+   "argv": [
+    "C:\\Program Files\\nodejs\\node.EXE",
+    "C:\\Users\\<user>\\Desktop\\hookconf\\tools\\pi\\node_modules\\@earendil-works\\pi-coding-agent\\dist\\bundle\\cli.js",
+    "--provider",
+    "hookconf",
+    "--model",
+    "mock"
+   ],
+   "mode": "default",
+   "exit": 1,
+   "duration_s": 1.51,
+   "timed_out": false,
+   "model_requests": 2,
+   "probe_events": 4,
+   "egress_refused": [],
+   "isolation_diff": {},
+   "unknown_requests": [],
+   "terminal": {
+    "backend": "windows-conpty",
+    "matched": [
+     "(hookconf) mock",
+     "HK-INTERACTIVE-ASK",
+     "HK-INTERACTIVE-DONE"
+    ],
+    "pending": []
+   },
+   "stdout_tail": "128;128;128mHK-INTERACTIVE-ASK\u001b[K\u001b[39m\r\n\u001b[K\r\n \u001b[38;2;128;128;128mTook 0.3s\u001b[K\u001b[39m\r\n\u001b[K\u001b[m\r\n\u001b[K\u001b[38;2;80;80;80m\r\n── ⠹ Working ───────────────────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[7m\r\n \u001b[27m\u001b[K\u001b[38;2;80;80;80m\r\n────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\u001b[38;2;102;102;102m\r\nC:\\hookconf-runs\\hookconf-pi-pi_interactive_no-q_u9qxs1\\project\u001b[K\r\n↑10 ↓5 0.0%/200k (auto)                                                                                  (hookconf) mock\u001b[m\u001b[?2026h\u001b[23;1H\u001b[K\u001b[120C\u001b]133;A\u0007\r\n\u001b[K\u001b[120C\u001b]133;B\u0007\u001b]133;C\u0007\u001b[?2026l\r HK-INTERACTIVE-DONE\u001b[K\r\n\u001b[K\u001b[38;2;80;80;80m\r\n────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\u001b[m\u001b[7m\r\n \u001b[27m\u001b[K\u001b[38;2;80;80;80m\r\n────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────\u001b[38;2;102;102;102m\r\nC:\\hookconf-runs\\hookconf-pi-pi_interactive_no-q_u9qxs1\\project\u001b[K\r\n↑20 ↓10 0.0%/200k (auto)                                                                                 (hookconf) mock",
+   "stderr_tail": ""
+  }
+ },
+ "session_errors": {}
+}

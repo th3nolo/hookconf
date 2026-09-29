@@ -1,0 +1,8 @@
+{
+  "name": "hookconf-ci-claude-code",
+  "private": true,
+  "description": "Pinned harness for hookconf CI; installed with npm ci --ignore-scripts",
+  "dependencies": {
+    "@anthropic-ai/claude-code": "2.1.278"
+  }
+}

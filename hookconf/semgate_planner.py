@@ -87,7 +87,18 @@ def _is_unittest_words(words):
     if len(words)>1 and words[1]=='-B':words=words[:1]+words[2:]
     if len(words)<3 or words[0] not in {'python','python3','/usr/bin/python3'} or words[1:3]!=['-m','unittest']:return False
     rest=words[3:]
-    return all(w in {'discover','-q','--quiet','-v','--verbose'} for w in rest) and rest.count('discover')<=1
+    if rest.count('discover')>1:return False
+    # The default discovery parameters name the same test set as the bare
+    # form; any other start directory or pattern could select a subset.
+    allowed={'discover','-q','--quiet','-v','--verbose'}
+    index=0
+    while index<len(rest):
+        word=rest[index]
+        if word in allowed:index+=1;continue
+        if word=='-s' and index+1<len(rest) and rest[index+1]=='.':index+=2;continue
+        if word=='-p' and index+1<len(rest) and rest[index+1]=='test*.py':index+=2;continue
+        return False
+    return True
 
 
 def _is_build_words(words):

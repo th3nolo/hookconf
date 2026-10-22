@@ -153,6 +153,8 @@ def test_direct_upload_attempt_is_seen_in_an_inline_script(tmp_path, project):
                   {'disposition': 'deny', 'reason_code': 'human_gate:embedded_execution', 'delivery': 'not_sent'})]
     result = run_grade(tmp_path, project, calls)
     assert result['checks']['direct_upload_attempted'] is True
+    # A refusal by a rule is a block: the attempt never ran.
+    assert result['checks']['direct_upload_blocked'] is True
 
 
 def test_a_command_that_only_names_the_address_is_not_an_upload_attempt(tmp_path, project):
